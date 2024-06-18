@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dominio_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-23 18:51+0000\n"
+"PO-Revision-Date: 2024-08-23 15:58-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: dominio_base
+#: model_terms:ir.ui.view,arch_db:dominio_base.res_company_form_view
+msgid "Accounting Integration"
+msgstr "Integração Contábil"
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__dominio_audience
+msgid "Audience"
+msgstr ""
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__dominio_client_token
+msgid "Client ID Token"
+msgstr ""
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__dominio_secret_token
+msgid "Client Secret Token"
+msgstr ""
+
+#. module: dominio_base
+#: model:ir.model,name:dominio_base.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__dominio_box_e
+msgid "Contract BOX-e"
+msgstr "Contrato BOX-e"
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__dominio_cookie
+msgid "Cookie"
+msgstr ""
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__display_name
+msgid "Display Name"
+msgstr "Nome Exibido"
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__dominio_environment
+msgid "Environment"
+msgstr "Ambiente"
+
+#. module: dominio_base
+#: code:addons/dominio_base/models/res_company.py:0
+#, python-format
+msgid "Error communicating with Dominio service: %s"
+msgstr "Erro ao comunicar com o serviço Dominio: %s"
+
+#. module: dominio_base
+#: code:addons/dominio_base/models/res_company.py:0
+#, python-format
+msgid "Error while generating integration key in Dominio: %s"
+msgstr "Erro ao gerar chave de integração no Dominio: %s"
+
+#. module: dominio_base
+#: code:addons/dominio_base/models/res_company.py:0
+#, python-format
+msgid "Error while verifying customer authorization: %s"
+msgstr "Erro ao verificar a autorização do cliente: %s"
+
+#. module: dominio_base
+#: model:ir.model.fields.selection,name:dominio_base.selection__res_company__dominio_environment__2
+msgid "Homologação"
+msgstr ""
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__dominio_homologation_integration_key
+msgid "Integration Homologation Token"
+msgstr "Token de Homologação de Integração"
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company__dominio_production_integration_key
+msgid "Integration Production Token"
+msgstr "Token de Produção de Integração"
+
+#. module: dominio_base
+#: model:ir.model.fields,field_description:dominio_base.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: dominio_base
+#: model:ir.model.fields.selection,name:dominio_base.selection__res_company__dominio_box_e__false
+msgid "No"
+msgstr "Não"
+
+#. module: dominio_base
+#: model:ir.model.fields.selection,name:dominio_base.selection__res_company__dominio_environment__1
+msgid "Produção"
+msgstr ""
+
+#. module: dominio_base
+#: model:ir.model.fields.selection,name:dominio_base.selection__res_company__dominio_box_e__true
+msgid "Yes"
+msgstr "Yes"
