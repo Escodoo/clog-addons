@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Kaynnan Lemes
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="l10n_br_fiscal_closing_form_view">
+        <field name="name">l10n_br_fiscal.closing.form (in dominio_fiscal)</field>
+        <field name="model">l10n_br_fiscal.closing</field>
+        <field name="inherit_id" ref="l10n_br_fiscal_closing.fiscal_closing_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="before">
+                <button
+                    string="Send to Dominio CTes/NFSe"
+                    name="action_dominio_send"
+                    attrs="{'invisible': [('state', 'not in', 'open')]}"
+                    type="object"
+                    class="oe_highlight"
+                />
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
