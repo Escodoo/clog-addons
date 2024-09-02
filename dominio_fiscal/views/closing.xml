@@ -17,6 +17,14 @@
                     class="oe_highlight"
                 />
             </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Incoming Receipt">
+                    <field name="incoming_payment_move_line_ids" readonly="1" />
+                </page>
+                <page string="Outgoing Receipt">
+                    <field name="outgoing_payment_move_line_ids" readonly="1" />
+                </page>
+            </xpath>
         </field>
     </record>
 

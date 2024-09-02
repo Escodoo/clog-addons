@@ -10,11 +10,14 @@
     "author": "Escodoo",
     "website": "https://github.com/Escodoo/clog-addons",
     "depends": [
-        "dominio_base",
         "l10n_br_fiscal_closing",
+        "dominio_base",
     ],
     "data": [
-        "views/l10n_br_fiscal_document.xml",
-        "views/l10n_br_fiscal_closing.xml",
+        # Views
+        "views/closing.xml",
+        "views/document_view.xml",
+        "views/document_type_view.xml",
+        "views/account_invoice_view.xml",
     ],
 }

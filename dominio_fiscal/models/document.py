@@ -31,6 +31,9 @@ class FiscalDocument(models.Model):
     dominio_response = fields.Char(
         readonly=True,
     )
+    dominio_species_code = fields.Char(
+        string="Dominio Species Code", related="document_type_id.dominio_specie"
+    )
 
     def action_create_xml_static(self):
         for record in self:

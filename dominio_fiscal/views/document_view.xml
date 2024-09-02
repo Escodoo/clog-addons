@@ -8,6 +8,9 @@
         <field name="model">l10n_br_fiscal.document</field>
         <field name="inherit_id" ref="l10n_br_fiscal.document_form" />
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='issuer']" position="after">
+                <field name="dominio_species_code" />
+            </xpath>
             <xpath expr="//button[@name='view_pdf']" position="before">
                 <button
                     string="Create XML"
@@ -24,7 +27,11 @@
         <field name="model">l10n_br_fiscal.document</field>
         <field name="inherit_id" ref="l10n_br_fiscal.document_tree" />
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='document_type']" position="before">
+                <field name="dominio_species_code" />
+            </xpath>
             <xpath expr="//field[@name='state_edoc']" position="after">
+
                 <field
                     name="dominio_state"
                     widget="badge"
