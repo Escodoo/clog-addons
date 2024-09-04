@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ndd_averba_base
+#
+# Translators:
+# Wesley Oliveira <wesley.oliveira@escodoo.com.br>, 2024
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-06 11:00+0000\n"
+"PO-Revision-Date: 2024-09-06 11:00+0000\n"
+"Last-Translator: Wesley Oliveira, 2024\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ndd_averba_base
+#: model:ir.model,name:ndd_averba_base.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields,field_description:ndd_averba_base.field_res_company__display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: ndd_averba_base
+#: model_terms:ir.ui.view,arch_db:ndd_averba_base.res_company_form_view
+msgid "Document Registration"
+msgstr "Averbação de Documentos"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields,field_description:ndd_averba_base.field_res_company__ndd_averba_environment
+msgid "Environment"
+msgstr "Ambiente"
+
+#. module: ndd_averba_base
+#: code:addons/ndd_averba_base/models/res_company.py:0
+#, python-format
+msgid "Error communicating with NDD Averba service: %s"
+msgstr "Erro na comunicação com o serviço NDD Averba: %s"
+
+#. module: ndd_averba_base
+#: code:addons/ndd_averba_base/models/res_company.py:0
+#, python-format
+msgid "Error while verifying user authorization: %s"
+msgstr "Erro na verificação da autenticação do usuário: %s"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields.selection,name:ndd_averba_base.selection__res_company__ndd_averba_environment__2
+msgid "Homologation"
+msgstr "Homologação"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields,field_description:ndd_averba_base.field_res_company__ndd_averba_homologation_user_email
+msgid "Homologation User E-mail"
+msgstr "E-mail Homologação"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields,field_description:ndd_averba_base.field_res_company__ndd_averba_homologation_user_password
+msgid "Homologation User Password"
+msgstr "Senha Homologação"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields,field_description:ndd_averba_base.field_res_company__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields,field_description:ndd_averba_base.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Última modificação em"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields.selection,name:ndd_averba_base.selection__res_company__ndd_averba_environment__1
+msgid "Production"
+msgstr "Produção"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields,field_description:ndd_averba_base.field_res_company__ndd_averba_production_user_email
+msgid "Production User E-mail"
+msgstr "E-mail Produção"
+
+#. module: ndd_averba_base
+#: model:ir.model.fields,field_description:ndd_averba_base.field_res_company__ndd_averba_production_user_password
+msgid "Production User Password"
+msgstr "Senha Produção"
+
+#. module: ndd_averba_base
+#: code:addons/ndd_averba_base/models/res_company.py:0
+#: code:addons/ndd_averba_base/models/res_company.py:0
+#, python-format
+msgid "mensagem"
+msgstr "mensagem"
