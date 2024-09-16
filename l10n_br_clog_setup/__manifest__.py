@@ -21,7 +21,7 @@
         "l10n_br_cnpj_search",
         # "l10n_br_cnab_structure",
         "l10n_br_coa",
-        "l10n_br_coa_generic",
+        # "l10n_br_coa_generic",
         # "l10n_br_coa_simple",
         "l10n_br_contract",
         "l10n_br_crm",
