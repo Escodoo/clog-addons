@@ -61,7 +61,7 @@
         "l10n_br_zip",
         "spec_driven_model",
         # escodoo/tms
-        "l10n_br_tms_sale_cte",
+        "l10n_br_tms_sale",
         # escodoo/account-addons
         "l10n_br_mis_builder_cash_flow_sale",
     ],
