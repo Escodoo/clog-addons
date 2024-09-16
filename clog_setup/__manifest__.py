@@ -16,6 +16,7 @@
         "account_due_list",
         "account_due_list_payment_mode",
         "account_financial_report",
+        "account_in_payment",
         "account_lock_date_update",
         "account_lock_to_date",
         "account_menu",
