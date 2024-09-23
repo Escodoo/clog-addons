@@ -64,9 +64,7 @@ class ResCompany(models.Model):
                 raise UserError(_(content["mensagem"]))
 
         except requests.HTTPError as e:
-            raise UserError(
-                _("Error communicating with NDD Averba service: %s") % e
-            ) from e
+            raise UserError(_("Error while getting user authorization: %s") % e) from e
 
     def _check_ndd_averba_user(self):
         try:
