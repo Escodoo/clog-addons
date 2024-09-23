@@ -1,0 +1,287 @@
+id,code,name,note,user_type_id:id,reconcile,chart_template_id:id
+clog_account_template_1_1_10_100_1,1.1.10.100.1,CAIXA GERAL,5,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_10_200_1,1.1.10.200.1,BANCO BRADESCO S/A.,1725,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_10_200_2,1.1.10.200.2,BANCO SAFRA,9,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_10_200_3,1.1.10.200.3,BANCO SANTANDER,1075,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_10_200_4,1.1.10.200.4,BANCO SAFRA - CAUÇÃO,2528,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_10_200_5,1.1.10.200.5,BANCO DO BRASIL S.A.,3918,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_10_200_6,1.1.10.200.6,CREDIFIESC,3176,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_10_200_7,1.1.10.200.7,UNICRED,5161,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_10_200_99,1.1.10.200.99,TRANSFERÊNCIA DE LIQUIDEZ,,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_10_300_1,1.1.10.300.1,BANCO BRADESCO APLICAÇÃO,11,account.data_account_type_liquidity,0,clog_coa_template
+clog_account_template_1_1_20_100_1,1.1.20.100.1,LIGUEPONTO,9205,account.data_account_type_receivable,1,clog_coa_template
+clog_account_template_1_1_30_200_01,1.1.30.200.01,C-PACK CREATIVE PACKAGING S/A,974,account.data_account_type_receivable,1,clog_coa_template
+clog_account_template_1_1_30_500_01,1.1.30.500.01,ADIANTAMENTO A FORNECEDORES,904,account.data_account_type_prepayments,0,clog_coa_template
+clog_account_template_1_1_30_500_02,1.1.30.500.02,ADIANTAMENTO MMP DISTRIBUIDORA,1178,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_600_03,1.1.30.600.03,ADIANTAMENTO PARA VIAGENS,637,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_600_1,1.1.30.600.1,ADIANTAMENTO DE SALÁRIO,25,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_600_2,1.1.30.600.2,ADIANTAMENTO DE 13º SÁLARIO,26,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_600_3,1.1.30.600.3,ADIANTAMENTO DE FÉRIAS,2275,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_1,1.1.30.800.1,IPI A RECUPERAR,29,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_2,1.1.30.800.2,ICMS A RECUPERAR,30,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_3,1.1.30.800.3,IRRF A RECUPERAR,31,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_4,1.1.30.800.4,IMPOSTO DE RENDA A RECUPERAR,32,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_5,1.1.30.800.5,CONTRIBUIÇÃO SOCIAL A RECUPERAR,33,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_6,1.1.30.800.6,TRIBUTOS PAGOS PARCELAMENTO,34,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_7,1.1.30.800.7,CONTRIBUIÇÃO SOCIAL RETIDO A COMPENSAR,35,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_8,1.1.30.800.8,COFINS RETIDO A COMPENSAR,36,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_800_9,1.1.30.800.9,PIS RETIDO A COMPENSAR,37,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_801_0,1.1.30.801.0,INSS A COMPENSAR,38,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_801_2,1.1.30.801.2,COFINS A RECUPERAR,40,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_801_3,1.1.30.801.3,PIS A RECUPERAR,41,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_801_4,1.1.30.801.4,COFINS A RECUPERAR - CRÉDITO PRESUMIDO,42,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_801_5,1.1.30.801.5,PIS RECUPERAR - CRÉDITO PRESUMIDO,43,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_801_6,1.1.30.801.6,ISS A RECUPERAR,476,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_30_801_7,1.1.30.801.7,ICMS A COMPENSAR,9826,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_40_100_1,1.1.40.100.1,APLICAÇÕES BANCO DO BRASIL,48,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_60_1,1.1.60.1,DESPESAS DE MESES SEGUINTES,66,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_60_100_1,1.1.60.100.1,PREMIOS DE SEGUROS A APROPRIAR,67,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_1_60_200_2,1.1.60.200.2,ASSINATURAS E ANUIDADES,68,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_2_10_199_9,1.2.10.199.9,CLIENTE DIVERSOS,73,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_2_10_2,1.2.10.2,(-) DUPLICATAS DESCONTADAS,74,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_2_20_400_1,1.2.20.400.1,ADIANTAMENTO DE DIVIDENDOS,729,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_2_20_600_1,1.2.20.600.1,DEPÓSITOS JUDICIAIS,8314,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_3_10_100_01,1.3.10.100.01,CREDIFIESC - COTAS DE CAPITAL,3206,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_3_10_100_02,1.3.10.100.02,UNICRED - COTAS DE CAPITAL,5214,account.data_account_type_current_assets,0,clog_coa_template
+clog_account_template_1_3_10_100_03,1.3.10.100.03,TITULOS DE CAPITALIZAÇÃO,9724,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_100_3,1.3.20.100.3,INSTALAÇÕES,9946,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_200_1,1.3.20.200.1,MÓVEIS E UTENSILIOS,117,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_300_1,1.3.20.300.1,MÁQUINAS E EQUIPAMENTOS,119,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_400_1,1.3.20.400.1,VEÍCULOS,121,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_500_1,1.3.20.500.1,COMPUTADORES E PERIFERICOS,809,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_500_2,1.3.20.500.2,SOFTWARE,4322,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_800_1,1.3.20.800.1,RESIDUAL LEASING,607,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_800_2,1.3.20.800.2,SEMI-REBOQUE MONTEIRO,895,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_800_3,1.3.20.800.3,CARRETA MONTEIRO,1023,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_800_4,1.3.20.800.4,PROJETO BAU,2646,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_800_6,1.3.20.800.6,CONSÓRCIO,9721,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_900_1,1.3.20.900.1,(-) DEPRECIAÇÕES DE COMPUTADORES,126,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_900_2,1.3.20.900.2,(-) DEPRECIAÇÕES DE MÓVEIS E UTENSÍLIOS,127,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_900_3,1.3.20.900.3,"(-) DEPRECIAÇÕES DE MÁQUINAS, EQUIP. FER",128,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_900_4,1.3.20.900.4,(-) DEPRECIAÇÕES DE VEICULOS,129,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_900_6,1.3.20.900.6,(-) AMORTIZAÇÃO DE SOFTWARE,131,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_1_3_20_900_7,1.3.20.900.7,(-) DEPRECIAÇÕES DE INSTALAÇÕES,9948,account.data_account_type_fixed_assets,0,clog_coa_template
+clog_account_template_2_1_30_100_1,2.1.30.100.1,SHOPING COM DE PROD. DE SEG DO TRABALHO,2806,account.data_account_type_receivable,1,clog_coa_template
+clog_account_template_2_1_40_100_2,2.1.40.100.2,ICMS A RECOLHER,172,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_100_3,2.1.40.100.3,ISS A RECOLHER,173,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_100_4,2.1.40.100.4,PROVISÃO PARA IMPOSTO DE RENDA,174,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_100_5,2.1.40.100.5,PROVISÃO P/ CONTRIBUIÇÃO SOCIAL,175,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_100_6,2.1.40.100.6,IMPOSTO DE RENDA A RECOLHER,176,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_100_7,2.1.40.100.7,CONTRIBUIÇÃO SOCIAL A RECOLHER,177,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_100_8,2.1.40.100.8,IRRF A RECOLHER,178,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_100_9,2.1.40.100.9,PIS A RECOLHER,179,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_101_0,2.1.40.101.0,COFINS A RECOLHER,180,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_101_3,2.1.40.101.3,ISS RETIDO A RECOLHER,183,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_101_4,2.1.40.101.4,INSS RETIDO A RECOLHER,184,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_102_1,2.1.40.102.1,CSRF RETIDO A RECOLHER,489,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_102_3,2.1.40.102.3,CONTRIBUIÇÃO SINDICAL A RECOLHER,491,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_102_9,2.1.40.102.9,PARCELAMENTO FEDERAL,2511,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_200_1,2.1.40.200.1,ICMS PARCELADO,982,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_200_3,2.1.40.200.3,INSS PARCELADO,1041,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_200_5,2.1.40.200.5,ICMS-SP PARCELADO,3923,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_10,2.1.40.202.10,CSRF RETIDO PARCELADO,6900,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_11,2.1.40.202.11,PARCELAMENTO FEDERAL LEI 12.996/14,9712,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_12,2.1.40.202.12,PARCELAMENTO FEDERAL PRT MP 766/2017,9802,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_13,2.1.40.202.13,PARCELEMANTO FEDERAL PERT MP 783/2017,9822,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_4,2.1.40.202.4,PARCELAMENTO FEDERAL LEI 11.941,1231,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_5,2.1.40.202.5,PIS PARCELAMENTO,2507,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_6,2.1.40.202.6,COFINS PARCELAMENTO,2508,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_7,2.1.40.202.7,CSLL PARCELAMENTO,2509,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_8,2.1.40.202.8,IRPJ PARCELAMENTO,2510,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_40_202_9,2.1.40.202.9,IRRF PARCELADO,6899,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_100_1,2.1.50.100.1,SALÁRIOS E ORDENADOS A PAGAR,187,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_100_3,2.1.50.100.3,PENSAO ALIMENTICIA A PAGAR,189,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_100_4,2.1.50.100.4,PLR À PAGAR,9959,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_200_1,2.1.50.200.1,INSS A RECOLHER,191,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_200_2,2.1.50.200.2,FGTS A RECOLHER,192,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_300_1,2.1.50.300.1,PROVISÕES PARA FÉRIAS,194,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_300_2,2.1.50.300.2,PROVISÕES PARA 13º SALÁRIO,195,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_300_3,2.1.50.300.3,INSS SOBRE PROVISÕES PARA FÉRIAS,196,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_300_4,2.1.50.300.4,INSS SOBRE PROVISÕES PARA 13º SALÁRIO,197,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_300_5,2.1.50.300.5,FGTS SOBRE PROVISÕES PARA FÉRIAS,198,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_50_300_6,2.1.50.300.6,FGTS SOBRE PROVISÕES PARA 13º SALÁRIO,199,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_100_01,2.1.60.100.01,C-PACK CREATIVE PACKAGING S/A,650,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_100_06,2.1.60.100.06,CHEQUES A COMPENSAR,1221,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_04,2.1.60.200.04,BANCO SAFRA S/A - FINAME,1496,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_03,2.1.60.200.03,BANCO SAFRA S/A - EMPRÉSTIMO,2097,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_01,2.1.60.200.01,BANCO SAFRA C/C,2725,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_02,2.1.60.200.02,BANCO DO BRASIL S.A.,3919,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_05,2.1.60.200.05,BANCO ITAU S/A,984,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_10,2.1.60.200.10,BANCO SANTANDER C/C,9788,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_100,2.1.60.200.100,BRADESCO ADMINISTRADORA DE CONSORCIOS LTDA,5552,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_11,2.1.60.200.11,SCANIA BANCO S.A,5513,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_12,2.1.60.200.12,BANCO SCANIA S.A,9866,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_15,2.1.60.200.15,BANCO DO BRASIL C/C,4113,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_16,2.1.60.200.16,BANCO BRADESCO S/A,1507,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_17,2.1.60.200.17,BANCO FIDIS S/A,1896,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_18,2.1.60.200.18,BANCO BNDES,2825,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_13,2.1.60.200.13,BANCO VOLKSWAGEN S.A.,2826,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_14,2.1.60.200.14,CREDIFIESC C/C,3921,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_06,2.1.60.200.06,CREDIFIESC - EMPRÉSTIMO,3205,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_07,2.1.60.200.07,UNICRED C/C,5187,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_08,2.1.60.200.08,"CIA DE CREDITO, FINANC E INVEST RCI BRAS",5446,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_09,2.1.60.200.09,BANCO CNH INDUSTRIAL CAPITAL,5458,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_200_999,2.1.60.200.999,(-) JUROS S/EMPRÉSTIMOS A APROPRIAR,1508,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_1_60_300_1,2.1.60.300.1,OUTROS TITULOS A PAGAR,9667,account.data_account_type_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_10,2.2.10.300.10,BRADESCO ADMINISTRADORA DE CONSORCIOS LTDA LP,9849,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_12,2.2.10.300.12,BANCO SCANIA S.A LP,9867,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_2,2.2.10.300.2,BANCO SAFRA - FINAME LP,5268,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_3,2.2.10.300.3,BANCO BRADESCO S.A LP,5269,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_4,2.2.10.300.4,BANCO FIDIS S/A LP,5270,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_5,2.2.10.300.5,BANCO BNDES,5271,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_6,2.2.10.300.6,CREDIFIESC - COOP,9470,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_7,2.2.10.300.7,"CIA DE CREDITO, FINANC E INVEST RCI BRAS LP",9716,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_8,2.2.10.300.8,BANCO CNH INDUSTRIAL CAPITAL LP,9725,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_10_300_9,2.2.10.300.9,SCANIA BANCO S.A LP,9798,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_10,2.2.30.100.10,IRRF PARCELADO LP,6901,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_11,2.2.30.100.11,PARCELAMENTO DA LEI 12.996/14 LP,9713,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_12,2.2.30.100.12,PARCELAMENTO FEDERAL PRT MP 766/2017 LP,9803,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_13,2.2.30.100.13,PARCELEMANTO FEDERAL PERT MP 783/2017 LP,9823,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_3,2.2.30.100.3,INSS PARCELADO - LP,5215,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_4,2.2.30.100.4,ICMS PARCELADO SP - LP,5217,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_5,2.2.30.100.5,PARCELAMENTO LEI 11941 - LP,5218,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_6,2.2.30.100.6,PIS PARCELADO LP,5219,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_7,2.2.30.100.7,COFINS PARCELADO - LP,5220,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_8,2.2.30.100.8,IRPJ PARCELADO - LP,5221,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_2_30_100_9,2.2.30.100.9,CSLL PARCELADO - LP,5222,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_4_10_100_1,2.4.10.100.1,CAPITAL SOCIAL,245,account.data_account_type_equity,0,clog_coa_template
+clog_account_template_2_4_30_100_1,2.4.30.100.1,(-) PREJUIZOS ACUMULADOS,266,account.data_account_type_equity,0,clog_coa_template
+clog_account_template_2_4_30_100_2,2.4.30.100.2,(-)PREJUÍZOS ACUMULADOS,267,account.data_account_type_equity,0,clog_coa_template
+clog_account_template_2_4_30_100_3,2.4.30.100.3,RESULTADO DO EXERCÍCIO EM CURSO,268,account.data_unaffected_earnings,0,clog_coa_template
+clog_account_template_2_4_30_100_4,2.4.30.100.4,(+/-) AJUSTE DE EXERCICIOS ANTERIORES,1076,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_4_30_100_5,2.4.30.100.5,LUCROS DO EXERCÍCO,9962,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_4_30_100_6,2.4.30.100.6,PREJUÍZOS DO EXERCICIO,9963,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_2_4_30_100_7,2.4.30.100.7,LUCROS ACUMULADOS,9964,account.data_account_type_non_current_liabilities,0,clog_coa_template
+clog_account_template_3_1_10_200_1,3.1.10.200.1,SALÁRIOS E ORDENADOS,274,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_10_200_2,3.1.10.200.2,PRÓ-LABORE,275,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_10_200_3,3.1.10.200.3,PRÊMIOS DE GRATIFICAÇÕES,276,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_000_1,3.1.31.000.1,COMBUSTIVEL,630,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_100_01,3.1.31.100.01,MANUTENÇÃO DE VEICULOS,641,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_100_02,3.1.31.100.02,PNEUS E CÂMARAS DE AR,2800,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_100_03,3.1.31.100.03,SEGUROS,9668,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_100_04,3.1.31.100.04,DESPESAS C/ EMPLACAMENTO,9669,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_100_05,3.1.31.100.05,IPVA,9670,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_200_01,3.1.31.200.01,SERVIÇO DE FRETE TERCEIROS,645,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_200_02,3.1.31.200.02,MONITORAMENTO DE CARGAS,2442,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_200_03,3.1.31.200.03,SEGURO DE CARGAS,2527,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_400_01,3.1.31.400.01,ALUGUEIS DE IMOVEIS,9672,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_400_02,3.1.31.400.02,IPTU,9673,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_500_01,3.1.31.500.01,DIARIAS,632,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_500_02,3.1.31.500.02,PEDAGIO,633,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_500_03,3.1.31.500.03,COMBUSTIVEL EM VIAGENS,634,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_500_04,3.1.31.500.04,CHAPAS,635,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_500_05,3.1.31.500.05,MANUTENÇÃO VEICULOS EM VIAGEM,636,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_500_08,3.1.31.500.08,SERVIÇOS DE PALETIZAÇÃO,2047,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_1_31_500_09,3.1.31.500.09,ESTACIONAMENTO,9813,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_02_000_1,3.2.02.000.1,COMISSÕES,308,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_1,3.2.10.100.1,SALÁRIOS E ORDENADOS,298,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_2,3.2.10.100.2,PRÓ-LABORE,299,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_3,3.2.10.100.3,PRÊMIOS E GRATIFICAÇÕES,300,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_4,3.2.10.100.4,13º SALÁRIO,301,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_5,3.2.10.100.5,FÉRIAS,302,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_6,3.2.10.100.6,INSS,303,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_7,3.2.10.100.7,FGTS,304,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_8,3.2.10.100.8,INDENIZAÇÕES E AVISO PRÉVIO,305,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_100_9,3.2.10.100.9,ASSISTÊNCIA MÉDICA E SOCIAL,306,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_300_2,3.2.10.300.2,PROPAGANDA E PUBLICIDADE,310,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_400_1,3.2.10.400.1,FRETES E CARRETOS,312,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_400_2,3.2.10.400.2,MANUTENÇÃO DE VEÍCULOS,313,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_500_1,3.2.10.500.1,VIAGENS,315,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_500_2,3.2.10.500.2,VIAGENS AEREAS,316,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_500_3,3.2.10.500.3,HOSPEDAGEM,317,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_500_4,3.2.10.500.4,REFEIÇÕES,318,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_600_1,3.2.10.600.1,ALUGUÉIS,320,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_600_2,3.2.10.600.2,MANUTENÇÃO E REPARO,321,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_600_3,3.2.10.600.3,TELEFONE,322,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_600_4,3.2.10.600.4,DESPESAS POSTAIS E TELEGRÁFICAS,323,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_600_5,3.2.10.600.5,DEPRECIAÇÕES E AMORTIZAÇÕES,324,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_600_6,3.2.10.600.6,SERVIÇOS PRESTADOS POR TERCEIROS,325,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_10_700_1,3.2.10.700.1,CRÉDITOS VENCIDOS E NÃO LIQUIDADOS,328,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_1,3.2.20.100.1,SALÁRIOS E ORDENADOS,331,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_2,3.2.20.100.2,PRÓ-LABORE,332,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_3,3.2.20.100.3,HORAS EXTRAS,9683,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_10,3.2.20.100.10,PRÊMIOS E GRATIFICAÇÕES,333,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_4,3.2.20.100.4,13º SALÁRIO,334,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_5,3.2.20.100.5,FÉRIAS,335,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_6,3.2.20.100.6,INSS,336,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_7,3.2.20.100.7,FGTS,337,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_8,3.2.20.100.8,INDENIZAÇÕES E AVISO PRÉVIO,338,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_100_9,3.2.20.100.9,ASSINTÊNCIA MÉDICA E SOCIAL,339,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_101_2,3.2.20.101.2,VALE TRANSPORTE,492,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_101_3,3.2.20.101.3,SEGURO DE VIDA EM GRUPO,326,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_101_1,3.2.20.101.1,ALIMENTAÇÃO,2521,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_200_1,3.2.20.200.1,ALUGUÉIS DE IMÓVEIS,341,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_200_2,3.2.20.200.2,ALUGUÉIS DE MÁQUINAS E EQUIPAMENTOS,342,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_200_4,3.2.20.200.4,ARRENDAMENTO MERCANTIL (LEASING),344,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_300_1,3.2.20.300.1,PIS,346,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_300_2,3.2.20.300.2,COFINS,347,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_300_3,3.2.20.300.3,IPTU,348,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_300_4,3.2.20.300.4,IPVA,349,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_300_5,3.2.20.300.5,TAXAS DIVERSAS,350,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_300_6,3.2.20.300.6,CPMF,351,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_300_7,3.2.20.300.7,MULTAS DE MORA,352,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_1,3.2.20.400.1,ENERGIA ELÉTRICA,354,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_2,3.2.20.400.2,ÁGUA E ESGOTO,355,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_3,3.2.20.400.3,TELEFONE,356,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_4,3.2.20.400.4,DESPESAS POSTAIS E TELEGRÁFICAS,357,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_5,3.2.20.400.5,SEGUROS,358,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_6,3.2.20.400.6,MATERIAL DE EXPEDIENTE,359,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_7,3.2.20.400.7,MATERIAL DE USO E CONSUMO,1249,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_10,3.2.20.400.10,MATERIAL DE HIGIENE E LIMPEZA,360,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_8,3.2.20.400.8,ASSISTÊNCIA CONTÁBIL,361,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_400_9,3.2.20.400.9,SERVIÇOS PRESTADOS POR TERCEIROS,362,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_401_0,3.2.20.401.0,DEPRECIAÇÕES E AMORTIZAÇÕES,363,account.data_account_type_depreciation,0,clog_coa_template
+clog_account_template_3_2_20_401_2,3.2.20.401.2,DESPESAS LEGAIS E JUDICIAIS,365,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_401_3,3.2.20.401.3,PUBLICIDADE E PROPAGANDA,366,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_401_4,3.2.20.401.4,MULTA DE TRÂNSITO,493,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_401_5,3.2.20.401.5,DESPESAS COPA COZINHA,716,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_401_7,3.2.20.401.7,DESPESAS C/CONSULTORIA,715,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_401_8,3.2.20.401.8,COMBUSTIVEIS E LUBRIFICANTES,584,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_401_9,3.2.20.401.9,LANCHES E REFEIÇÕES,726,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_0,3.2.20.402.0,INFORMATICA,728,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_1,3.2.20.402.1,DESPESAS C/ LICENCIAMENTO,727,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_2,3.2.20.402.2,BENFEITORIA IMOVEIS DE TERCEIROS,882,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_3,3.2.20.402.3,MATERIAL DE SEGURANÇA TRABALHO,886,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_4,3.2.20.402.4,CURSOS E TREINAMENTOS,890,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_5,3.2.20.402.5,BRINDE E CONFRATERNIZAÇÃO,915,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_6,3.2.20.402.6,UNIFORMES,958,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_7,3.2.20.402.7,INDENIZAÇÃO A TERCEIROS,1120,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_8,3.2.20.402.8,ASSESSORIA JURÍDICA,1497,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_10,3.2.20.402.10,DOAÇÕES,1897,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_402_9,3.2.20.402.9,COMISSÃO - CARGA CHEIA,10039,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_403_0,3.2.20.403.0,MANUTENÇÃO E REPAROS,2033,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_403_1,3.2.20.403.1,LOCAÇÕES DE EQUIPAMENTOS E MAQUINAS,3593,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_403_2,3.2.20.403.2,DESPESAS DIVERSAS,9843,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_500_4,3.2.20.500.4,DESCONTO CONCEDIDOS,371,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_500_5,3.2.20.500.5,JUROS DE MORA,372,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_500_6,3.2.20.500.6,JUROS SOBRE EMPRÉSTIMOS E FINANCIAMENTOS,1512,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_500_8,3.2.20.500.8,JUROS SOBRE TRIBUTOS,1513,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_500_7,3.2.20.500.7,TARIFAS E COMISSÕES BANCÁRIAS,374,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_500_9,3.2.20.500.9,IOF,2645,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_500_10,3.2.20.500.10,MULTA SOBRE TRIBUTOS,375,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_600_4,3.2.20.600.4,PARTICIPAÇÃO DE LUCRO E RESULTADO,9958,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_600_5,3.2.20.600.5,OUTRAS DESPESAS OPERACIONAIS,10027,account.data_account_type_expenses,0,clog_coa_template
+clog_account_template_3_2_20_701_1,3.2.20.701.1,DEPRECIAÇÃO VEÍCULOS,291,account.data_account_type_depreciation,0,clog_coa_template
+clog_account_template_3_2_20_701_2,3.2.20.701.2,DEPRECIAÇÃO MÓVEIS E UTENSILIOS,2098,account.data_account_type_depreciation,0,clog_coa_template
+clog_account_template_3_2_20_701_3,3.2.20.701.3,DEPRECIAÇÃO COMPUTADORES,2099,account.data_account_type_depreciation,0,clog_coa_template
+clog_account_template_3_2_20_701_4,3.2.20.701.4,DEPRECIAÇÃO DE MÁQUINAS E EQUIPAMENTOS,2100,account.data_account_type_depreciation,0,clog_coa_template
+clog_account_template_3_2_20_701_5,3.2.20.701.5,DEPRECIAÇÃO DE INSTALAÇÕES,9949,account.data_account_type_depreciation,0,clog_coa_template
+clog_account_template_3_2_20_701_6,3.2.20.701.6,AMORTIZAÇÃO SOFTWARE,4850,account.data_account_type_depreciation,0,clog_coa_template
+clog_account_template_4_1_10_200_1,4.1.10.200.1,SERVIÇOS PRESTADOS,411,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_10_200_2,4.1.10.200.2,SERVIÇOS DE ARMAZENAGEM,412,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_10_200_3,4.1.10.200.3,SERVIÇO DE TRANSPORTE DE NATUREZA MUNICI,2406,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_20_300_2,4.1.20.300.2,(-) ICMS,426,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_20_300_3,4.1.20.300.3,(-) ISS,427,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_20_300_4,4.1.20.300.4,(-) COFINS,428,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_20_300_5,4.1.20.300.5,(-) PIS,429,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_20_300_6,4.1.20.300.6,(-) CONTRIBUIÇÃO SOCIAL,477,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_20_300_7,4.1.20.300.7,(-) IMPOSTO DE RENDA,478,account.data_account_type_revenue,0,clog_coa_template
+clog_account_template_4_1_30_100_1,4.1.30.100.1,RENDIMENTO DE APLICAÇÕES,432,account.data_account_type_other_income,0,clog_coa_template
+clog_account_template_4_1_30_100_2,4.1.30.100.2,JUROS ATIVOS (OUTROS),433,account.data_account_type_other_income,0,clog_coa_template
+clog_account_template_4_1_30_100_3,4.1.30.100.3,DESCONTOS FINANCEIROS OBTIDOS,434,account.data_account_type_other_income,0,clog_coa_template
+clog_account_template_4_1_30_100_4,4.1.30.100.4,JUROS SOBRE O CAPITAL PRÓPRIO,435,account.data_account_type_other_income,0,clog_coa_template
+clog_account_template_4_2_10_100_1,4.2.10.100.1,BAIXA DE IMOBILIZADO,452,account.data_account_type_other_income,0,clog_coa_template
+clog_account_template_4_2_10_200_4,4.2.10.200.4,LUCROS/PERDAS NA ALIENAÇÃO DE VEICULOS,457,account.data_account_type_other_income,0,clog_coa_template
+clog_account_template_4_2_10_300_2,4.2.10.300.2,SINISTROS COM IMOBILIZADO,459,account.data_account_type_other_income,0,clog_coa_template
+clog_account_template_4_2_10_400_1,4.2.10.400.1,OUTRAS RECEITAS - NÃO OPERACIONAIS,9825,account.data_account_type_other_income,0,clog_coa_template
+clog_account_template_5_1_40_100_1,5.1.40.100.1,RESULTADO DO EXERCÍCIO,473,account.data_account_type_current_liabilities,0,clog_coa_template

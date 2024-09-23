@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <record id="clog_group_account_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1</field>
+        <field name="name">ATIVO</field>
+    </record>
+    <record id="clog_group_account_1_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1</field>
+        <field name="name">ATIVO CIRCULANTE</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1" />
+    </record>
+    <record id="clog_group_account_1_1_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.1</field>
+        <field name="name">DISPONIVEL</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1" />
+    </record>
+    <record id="clog_group_account_1_1_10_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.10.1</field>
+        <field name="name">CAIXA</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_1" />
+    </record>
+    <record id="clog_group_account_1_1_10_2" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.10.2</field>
+        <field name="name">BANCOS CONTA MOVIMENTO</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_1" />
+    </record>
+    <record id="clog_group_account_1_1_10_3" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.10.3</field>
+        <field name="name">APLICAÇÕES FINANCEIRAS LIQUIDEZ IMEDIATA</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_1" />
+    </record>
+
+    <record id="clog_group_account_1_1_2" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.2</field>
+        <field name="name">CLIENTES</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1" />
+    </record>
+    <record id="clog_group_account_1_1_20_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.20.1</field>
+        <field name="name">DUPLICATAS A RECEBER</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_2" />
+    </record>
+    <record id="clog_group_account_1_1_20_2" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.20.2</field>
+        <field name="name">(-) DUPLICATAS DESCONTADAS</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_2" />
+    </record>
+    <record id="clog_group_account_1_1_3" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.3</field>
+        <field name="name">OUTROS CRÉDITOS</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1" />
+    </record>
+    <record id="clog_group_account_1_1_30_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.30.1</field>
+        <field name="name">BANCOS CONTA VINCULADA</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_3" />
+    </record>
+    <record id="clog_group_account_1_1_30_2" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.30.2</field>
+        <field name="name">TITULOS A RECEBER</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_3" />
+    </record>
+    <record id="clog_group_account_1_1_30_3" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.30.3</field>
+        <field name="name">CHEQUES EM COBRANÇA</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_3" />
+    </record>
+    <record id="clog_group_account_1_1_30_5" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.30.5</field>
+        <field name="name">ADIANTAMENTOS A FORNECEDORES</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_3" />
+    </record>
+    <record id="clog_group_account_1_1_30_6" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.30.6</field>
+        <field name="name">ADIANTAMENTO A EMPREGADOS</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_3" />
+    </record>
+    <record id="clog_group_account_1_1_30_8" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.30.8</field>
+        <field name="name">TRIBUTOS A RECUPERAR/COMPENSAR</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_3" />
+    </record>
+    <record id="clog_group_account_1_1_4" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.4</field>
+        <field name="name">APLICAÇÕES FINANCEIRAS</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1" />
+    </record>
+    <record id="clog_group_account_1_1_40_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.40.1</field>
+        <field name="name">APLICAÇÕES FINANCEIRAS REND. PREFIXADOS</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_4" />
+    </record>
+    <record id="clog_group_account_1_1_6" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.6</field>
+        <field name="name">DESPESAS PAGAS ANTECIPADAMENTE</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1" />
+    </record>
+    <record id="clog_group_account_1_1_60_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.1.60.1</field>
+        <field name="name">DESPESAS DE MESES SEGUINTES</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_1_6" />
+    </record>
+    <record id="clog_group_account_1_2" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.2</field>
+        <field name="name">ATIVO REALIZÁVEL A LONGO PRAZO</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1" />
+    </record>
+    <record id="clog_group_account_1_2_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.2.1</field>
+        <field name="name">CLIENTES</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_2" />
+    </record>
+    <record id="clog_group_account_1_2_10_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.2.10.1</field>
+        <field name="name">DUPLICATADAS A RECEBER</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_2_1" />
+    </record>
+    <record id="clog_group_account_1_2_10_2" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.2.10.2</field>
+        <field name="name">(-) DUPLICATAS DESCONTADAS</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_2_1" />
+    </record>
+    <record id="clog_group_account_1_2_2" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.2.2</field>
+        <field name="name">OUTROS CRÉDITOS</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_2" />
+    </record>
+    <record id="clog_group_account_1_2_20_1" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">1.2.20.1</field>
+        <field name="name">TÍTULOS A RECEBER</field>
+        <field name="parent_id" ref="l10n_br_coa_clog.clog_group_account_1_2_2" />
+    </record>
+    <record id="clog_group_account_3_2_20_4" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">3.2.20.4</field>
+        <field name="name">DESPESAS GERAIS</field>
+    </record>
+    <record id="clog_group_account_4_2_10_3" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">4.2.10.3</field>
+        <field name="name">RESULTADO DE SINISTROS COM IMOBILIZADO</field>
+    </record>
+    <record id="clog_group_account_4_2_10_4" model="account.group.template">
+        <field name="chart_template_id" ref="clog_coa_template" />
+        <field name="code_prefix_start">4.2.10.4</field>
+        <field name="name">OUTRAS RECEITAS</field>
+    </record>
+</odoo>
