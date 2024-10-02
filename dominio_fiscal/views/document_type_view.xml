@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="document_type_tree_view">
+        <field name="name">l10n_br_fiscal.document.type.tree (in dominio_fiscal)</field>
+        <field name="model">l10n_br_fiscal.document.type</field>
+        <field name="inherit_id" ref="l10n_br_fiscal.document_type_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='electronic']" position="after">
+                <field name="dominio_specie" />
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="document_type_form_view">
+        <field name="name">l10n_br_fiscal.document.type.form (in dominio_fiscal)</field>
+        <field name="model">l10n_br_fiscal.document.type</field>
+        <field name="inherit_id" ref="l10n_br_fiscal.document_type_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='electronic']" position="after">
+                <field name="dominio_specie" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

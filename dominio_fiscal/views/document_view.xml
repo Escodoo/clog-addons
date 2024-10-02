@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="l10n_br_fiscal_document_form_view">
+        <field name="name">l10n_br_fiscal.document.form (in dominio_fiscal)</field>
+        <field name="model">l10n_br_fiscal.document</field>
+        <field name="inherit_id" ref="l10n_br_fiscal.document_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='issuer']" position="after">
+                <field name="dominio_species_code" />
+            </xpath>
+            <xpath expr="//button[@name='view_pdf']" position="before">
+                <button
+                    string="Create XML"
+                    name="action_create_xml_static"
+                    type="object"
+                    class="oe_highlight"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="l10n_br_fiscal_document_tree_view">
+        <field name="name">l10n_br_fiscal.document.tree (in dominio_fiscal)</field>
+        <field name="model">l10n_br_fiscal.document</field>
+        <field name="inherit_id" ref="l10n_br_fiscal.document_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='document_type']" position="before">
+                <field name="dominio_species_code" />
+            </xpath>
+            <xpath expr="//field[@name='state_edoc']" position="after">
+
+                <field
+                    name="dominio_state"
+                    widget="badge"
+                    decoration-success="dominio_state == 'stored'"
+                    decoration-danger="dominio_state == 'error'"
+                />
+                <field name="dominio_response" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
