@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="res_company_form_view">
+        <field name="name">res.company.form (in ndd_averba_base)</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Document Endorsement" name="document_endorsement">
+                    <group string="NDD Averba">
+                        <field name="ndd_averba_environment" />
+                        <field
+                            name="ndd_averba_production_user_email"
+                            attrs="{'invisible': [('ndd_averba_environment', '!=', '1')]}"
+                        />
+                        <field
+                            name="ndd_averba_production_user_password"
+                            attrs="{'invisible': [('ndd_averba_environment', '!=', '1')]}"
+                        />
+                        <field
+                            name="ndd_averba_homologation_user_email"
+                            attrs="{'invisible': [('ndd_averba_environment', '!=', '2')]}"
+                        />
+                        <field
+                            name="ndd_averba_homologation_user_password"
+                            attrs="{'invisible': [('ndd_averba_environment', '!=', '2')]}"
+                        />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

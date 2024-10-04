@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="ndd_averba_event_form_view">
+        <field name="name">ndd.averba.event.form</field>
+        <field name="model">ndd.averba.event</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field
+                                name="endorsement_state"
+                                widget="badge"
+                                decoration-success="endorsement_state == 'endorsed'"
+                                decoration-danger="endorsement_state == 'error'"
+                            />
+
+                            <field name="date" />
+                            <field name="company_id" />
+                            <field name="document_id" />
+                            <field name="amount" />
+                            <field name="total_insured" />
+                        </group>
+                        <group>
+                            <field name="cte_id" />
+                            <field name="document_number" />
+                            <field name="protocol_number" />
+                            <field name="endorsement_number" />
+                            <field name="insurance_company" />
+                            <field name="policy_number" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="endorsement_message" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="ndd_averba_event_tree_view">
+        <field name="name">ndd.averba.event.tree</field>
+        <field name="model">ndd.averba.event</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="company_id" />
+                <field name="document_id" />
+                <field name="endorsement_message" />
+                <field name="date" />
+                <field name="amount" />
+                <field name="cte_id" optional="hide" />
+                <field name="document_number" optional="hide" />
+                <field name="protocol_number" optional="hide" />
+                <field name="endorsement_number" optional="hide" />
+                <field name="total_insured" optional="hide" />
+                <field name="insurance_company" optional="hide" />
+                <field name="policy_number" optional="hide" />
+                <field
+                    name="endorsement_state"
+                    widget="badge"
+                    decoration-success="endorsement_state == 'endorsed'"
+                    decoration-danger="endorsement_state == 'error'"
+                />
+            </tree>
+        </field>
+    </record>
+
+</odoo>
