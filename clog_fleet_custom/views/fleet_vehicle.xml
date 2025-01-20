@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="fleet_vehicle_form_view">
+        <field name="name">fleet.vehicle.form (in clog_fleet_custom)</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <group>
+                    <field name="reference" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="fleet_vehicle_tree_view">
+        <field name="name">fleet.vehicle.tree (in clog_fleet_custom)</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='model_id']" position="after">
+                <field name="reference" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
