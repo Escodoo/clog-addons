@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="print_pay_invoice_simple_document">
+        <t t-set="o" t-value="doc" />
+        <t t-set="company" t-value="doc.company_id" />
+        <t t-call="web.basic_layout">
+            <!-- HEADER  -->
+            <div class="header">
+                <h6>Payer's Receipt</h6>
+                <table
+                    class="table table-condensed"
+                    style="border-collapse: collapse; width: 100%; border-top: 1px solid #000; border-bottom: 1px solid #000;"
+                >
+                    <tbody>
+                        <t t-set="total_payment_amount" t-value="0" />
+                        <t t-set="total_payment_icms_base" t-value="0" />
+                        <t t-set="total_payment_document" t-value="0" />
+
+                        <tr t-foreach="doc.payment_line_ids" t-as="line">
+                            <t
+                                t-set="total_payment_amount"
+                                t-value="total_payment_amount + line.amount_currency"
+                            />
+                            <t
+                                t-set="total_payment_icms_base"
+                                t-value="total_payment_icms_base + line.move_id.fiscal_document_id.amount_icms_base"
+                            />
+                            <t
+                                t-set="total_payment_document"
+                                t-value="total_payment_document + 1"
+                            />
+                        </tr>
+                        <tr>
+                            <!-- Logo da Empresa -->
+                            <td
+                                style="width: 20%; text-align: center; padding: 10px; vertical-align: middle; border-left: none; border-right: none; border-top: 1px solid #000; border-bottom: 1px solid #000;"
+                            >
+                                <span
+                                    t-field="doc.company_id.logo"
+                                    t-options="{'widget': 'image', 'class': 'img-rounded'}"
+                                />
+                            </td>
+                            <!-- Detalhes da Empresa -->
+                            <td
+                                style="padding: 10px; vertical-align: middle; border-left: none; border-right: none; border-top: 1px solid #000; border-bottom: 1px solid #000;"
+                            >
+                                <strong>
+                                    <!-- Display company name in uppercase -->
+                                    <span t-esc="doc.company_id.name.upper()" />
+                                </strong><br />
+
+                                <!-- Check if street_name exists -->
+    <t t-if="doc.company_id.street_name">
+                                    <span
+                                        t-esc="doc.company_id.street_name.upper()"
+                                    />, </t>
+
+                                <!-- Check if street_number exists -->
+    <t t-if="doc.company_id.street_number">
+                                    <span t-esc="doc.company_id.street_number" /> - </t>
+
+                                <!-- Check if street2 exists -->
+    <t t-if="doc.company_id.street2">
+                                    <span
+                                        t-esc="doc.company_id.street2.upper()"
+                                    /> - </t>
+
+                                <!-- Check if district exists -->
+    <t t-if="doc.company_id.district">
+                                    <span t-esc="doc.company_id.district.upper()" />
+                                    <br />
+                                </t>
+
+                                <!-- Check if zip exists -->
+    <t t-if="doc.company_id.zip">
+                                    <span t-esc="doc.company_id.zip" /> - </t>
+
+                                <!-- Check if city_id.name exists -->
+    <t t-if="doc.company_id.city_id and doc.company_id.city_id.name">
+                                    <span
+                                        t-esc="doc.company_id.city_id.name.upper()"
+                                    /> - </t>
+
+                                <!-- Check if state_id.name exists -->
+    <t t-if="doc.company_id.state_id and doc.company_id.state_id.name">
+                                    <span
+                                        t-esc="doc.company_id.state_id.name.upper()"
+                                    />
+                                    <br />
+                                </t>
+
+                                <!-- Check if cnpj_cpf exists --> CNPJ/CPF: <t
+                                    t-if="doc.company_id.cnpj_cpf"
+                                >
+                                    <span t-esc="doc.company_id.cnpj_cpf" />
+                                </t>
+
+                                <!-- Check if inscr_est exists -->
+                                - IE: <t t-if="doc.company_id.inscr_est">
+                                    <span t-esc="doc.company_id.inscr_est" />
+                                    <br />
+                                </t>
+
+                                <!-- Check if phone exists --> PHONE: <t
+                                    t-if="doc.company_id.phone"
+                                >
+                                    <span t-esc="doc.company_id.phone" />
+                                </t>
+                            </td>
+                            <!-- Número do Documento -->
+                            <td
+                                style="width: 15%; padding: 10px; text-align: center; vertical-align: middle; border-left: none; border-right: none; border-top: 1px solid #000; border-bottom: 1px solid #000;"
+                            >
+                                <div
+                                    style="display: flex; border: 1px solid #000; flex-direction: column; justify-content: center; align-items: center; height: 100%;"
+                                >
+                                    <strong
+                                        style="font-size: 14px;"
+                                    >DOCUMENT NUMBER</strong>
+                                    <hr
+                                        style="margin: 5px auto; width: 80%; border: 1px solid #000;"
+                                    />
+                                    <span
+                                        style="font-size: 14px;"
+                                        t-esc="doc.name.upper()"
+                                    />
+                                </div>
+                            </td>
+                            <!-- Valor Total -->
+                            <td
+                                style="width: 15%; padding: 10px; text-align: center; vertical-align: middle; border-left: none; border-right: none; border-top: 1px solid #000; border-bottom: 1px solid #000;"
+                            >
+                                <div
+                                    style="display: flex; border: 1px solid #000; flex-direction: column; justify-content: center; align-items: center; height: 100%;"
+                                >
+                                    <strong
+                                        style="font-size: 14px;"
+                                    >TOTAL AMOUNT</strong>
+                                    <hr
+                                        style="margin: 5px auto; width: 80%; border: 1px solid #000;"
+                                    />
+                                    <span
+                                        style="font-size: 14px;"
+                                        t-esc="total_payment_amount"
+                                        t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                    />
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <t t-set="incoterm_types" t-value="['FOB', 'CIF', '3PL']" />
+            <t t-foreach="incoterm_types" t-as="incoterm_type">
+                <t t-if="incoterm_type == '3PL'">
+                    <t
+                        t-set="has_incoterm"
+                        t-value="any(doc.payment_line_ids.filtered(lambda l: l.move_id.incoterm_id.code != 'FOB' and l.move_id.incoterm_id.code != 'CIF'))"
+                    />
+                </t>
+                <t t-else="">
+                    <t
+                        t-set="has_incoterm"
+                        t-value="any(doc.payment_line_ids.filtered(lambda l: l.move_id.incoterm_id.code == incoterm_type))"
+                    />
+                </t>
+                <t t-if="has_incoterm">
+                    <div class="page">
+                        <h6 t-esc="incoterm_type + ' SHIPPING'" />
+                        <table
+                            class="table table-condensed"
+                            style="border-collapse: collapse; width: 100%; border: 1px solid #000; font-size: 10px;"
+                        >
+                            <thead>
+                                <tr>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >CT-e / RPS /
+                                        NFS-e</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >Issue Date</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >Due Date</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >Sender</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >Fiscal Doc.
+                                        No.</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >Market Value
+                                        (R$)</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >Weight (Kg)</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >Tax Base (R$)</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >ICMS (R$)</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >ISS (R$)</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >ST (R$)</th>
+                                    <th
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >Freight (R$)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Inicializar variáveis -->
+                                <t t-set="total_amount" t-value="0" />
+                                <t t-set="total_document_count" t-value="0" />
+                                <t t-set="total_weight" t-value="0" />
+                                <t t-set="total_icms_base" t-value="0" />
+                                <t t-set="total_icms_value" t-value="0" />
+                                <t t-set="total_issqn_value" t-value="0" />
+                                <t t-set="total_icms_st_value" t-value="0" />
+                                <t t-set="total_freight_value" t-value="0" />
+
+                                <!-- Loop pelas linhas de pagamento -->
+                                <t t-if="incoterm_type == '3PL'">
+                                    <t
+                                        t-set="filtered_lines"
+                                        t-value="doc.payment_line_ids.filtered(lambda l: l.move_id.incoterm_id.code != 'FOB' and l.move_id.incoterm_id.code != 'CIF')"
+                                    />
+                                </t>
+                                <t t-else="">
+                                    <t
+                                        t-set="filtered_lines"
+                                        t-value="doc.payment_line_ids.filtered(lambda l: l.move_id.incoterm_id.code == incoterm_type)"
+                                    />
+                                </t>
+                                <tr t-foreach="filtered_lines" t-as="line">
+                                    <t
+                                        t-set="total_amount"
+                                        t-value="total_amount + line.amount_currency"
+                                    />
+                                    <t
+                                        t-set="total_document_count"
+                                        t-value="total_document_count + 1"
+                                    />
+                                    <t
+                                        t-set="total_icms_base"
+                                        t-value="total_icms_base + line.move_id.fiscal_document_id.amount_icms_base"
+                                    />
+                                    <t
+                                        t-set="total_weight"
+                                        t-value="total_weight + sum(line.move_id.fiscal_document_id.nfe40_vol.mapped('nfe40_pesoB'))"
+                                    />
+                                    <t
+                                        t-set="total_icms_value"
+                                        t-value="total_icms_value + line.move_id.fiscal_document_id.amount_icms_value"
+                                    />
+                                    <t
+                                        t-set="total_issqn_value"
+                                        t-value="total_issqn_value + line.move_id.fiscal_document_id.amount_issqn_value"
+                                    />
+                                    <t
+                                        t-set="total_freight_value"
+                                        t-value="total_freight_value + line.move_id.fiscal_document_id.amount_freight_value"
+                                    />
+                                    <t
+                                        t-set="total_icms_st_value"
+                                        t-value="total_icms_st_value + line.move_id.fiscal_document_id.amount_icmsst_value"
+                                    />
+
+                                    <!-- Exibir dados -->
+                                    <td style="border: 1px solid #000; padding: 5px;">
+                                        <span
+                                            t-esc="line.move_id.document_serie_id.code"
+                                        />
+                                        <span
+                                            t-esc="line.move_id.fiscal_document_id.rps_number"
+                                        />
+                                    </td>
+                                    <td style="border: 1px solid #000; padding: 5px;">
+                                        <span
+                                            t-esc="line.move_id.date"
+                                            t-options="{'widget': 'date'}"
+                                        />
+                                    </td>
+                                    <td style="border: 1px solid #000; padding: 5px;">
+                                        <span
+                                            t-esc="line.ml_maturity_date"
+                                            t-options="{'widget': 'date'}"
+                                        />
+                                    </td>
+                                    <td style="border: 1px solid #000; padding: 5px;">
+                                        <span t-esc="line.partner_id.cnpj_cpf" />
+                                        <span t-esc="line.partner_id.name.upper()" />
+                                    </td>
+                                    <td style="border: 1px solid #000; padding: 5px;">
+                                        <span
+                                            t-esc="line.move_id.document_serie_id.code"
+                                        />
+                                        <span t-esc="line.move_id.document_number" />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-field="line.amount_currency"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="sum(line.move_id.fiscal_document_id.nfe40_vol.mapped('nfe40_pesoB'))"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="line.move_id.fiscal_document_id.amount_icms_base"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="line.move_id.fiscal_document_id.amount_icms_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="line.move_id.fiscal_document_id.amount_issqn_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="line.move_id.fiscal_document_id.amount_icmsst_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="line.move_id.fiscal_document_id.amount_freight_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                </tr>
+                                <!-- Linha de totalização -->
+                                <tr>
+                                    <td
+                                        colspan="5"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >Total
+                                        Documents: <span
+                                            t-esc="total_document_count"
+                                        /></td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="total_amount"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span t-esc="total_weight" />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="total_icms_base"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="total_icms_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="total_issqn_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="total_icms_st_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                    <td
+                                        class="text-right"
+                                        style="border: 1px solid #000; padding: 5px;"
+                                    >
+                                        <span
+                                            t-esc="total_freight_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="page-break-before:always;" />
+                </t>
+            </t>
+            <!-- OTHER INFORMATIONS -->
+            <div class="page">
+                <div class="row">
+                    <div class="col-12">
+                        <h6>
+                            <strong
+                            >The processing of personal data may be carried out for
+                                the execution of the transport contract (LGPD art. 7, V).</strong>
+                        </h6>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-6">
+                        <table
+                            class="table table-condensed"
+                            style="border-collapse: collapse; width: 100%; border: 1px solid #000; font-size: 10px;"
+                        >
+                            <!-- Número de Documentos -->
+                            <tr>
+                                <th
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >Number of
+                                    Documents</th>
+                                <td
+                                    class="text-center"
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >
+                                    <span t-esc="total_payment_document" />
+                                </td>
+                            </tr>
+                            <!-- Valores de Frete/Serviço -->
+                            <t t-set="incoterm_types" t-value="['FOB', 'CIF', '3PL']" />
+                            <t t-foreach="incoterm_types" t-as="incoterm_type">
+                                <t
+                                    t-set="has_incoterm"
+                                    t-value="any(doc.payment_line_ids.filtered(lambda l: l.move_id.incoterm_id.code == incoterm_type))"
+                                />
+                                <t
+                                    t-set="freight_lines"
+                                    t-value="doc.payment_line_ids.filtered(lambda l: l.move_id.incoterm_id.code == incoterm_type)"
+                                />
+                                <t
+                                    t-set="freight_value"
+                                    t-value="sum(line.move_id.fiscal_document_id.amount_freight_value for line in freight_lines) if has_incoterm else 0.00"
+                                />
+                                <tr>
+                                    <th style="border: 1px solid #000; padding: 8px;">
+                                        <t
+                                            t-esc="incoterm_type + ' Freight/Service Value'"
+                                        />
+                                    </th>
+                                    <td
+                                        class="text-center"
+                                        style="border: 1px solid #000; padding: 8px;"
+                                    >
+                                        <span
+                                            t-esc="freight_value"
+                                            t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                        />
+                                    </td>
+                                </tr>
+                            </t>
+                            <!-- Outros valores fixos -->
+                            <tr>
+                                <th
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >Return/Redelivery
+                                    Freight Value</th>
+                                <td
+                                    class="text-center"
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >-</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >Additional
+                                    Freight/Discounts Value</th>
+                                <td
+                                    class="text-center"
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >-</td>
+                            </tr>
+                            <tr>
+                                <th style="border: 1px solid #000; padding: 8px;">
+                                    <strong>TOTAL VALUE</strong>
+                                </th>
+                                <td
+                                    class="text-center"
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >0</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-6">
+                        <table
+                            class="table table-condensed"
+                            style="border-collapse: collapse; width: 100%; border: 1px solid #000; font-size: 10px;"
+                        >
+                            <!-- ICMS e outros valores -->
+                            <tr>
+                                <th
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >Freight/Service
+                                    ICMS Value (12.00% Rate)</th>
+                                <td
+                                    class="text-center"
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >
+                                    <span
+                                        t-esc="total_payment_icms_base"
+                                        t-options="{'widget': 'monetary', 'currency_field': 'doc.company_currency_id', 'display_currency': doc.company_currency_id}"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border: 1px solid #000; padding: 8px;">Exempt
+                                    Freight/Service Value</th>
+                                <td
+                                    class="text-center"
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >-</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >Toll Value
+                                    of CTRCs</th>
+                                <td
+                                    class="text-center"
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >-</td>
+                            </tr>
+                            <tr>
+                                <th style="border: 1px solid #000; padding: 8px;">Goods
+                                    Value of CTRCs</th>
+                                <td
+                                    class="text-center"
+                                    style="border: 1px solid #000; padding: 8px;"
+                                >-</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </t>
+    </template>
+
+    <template id="print_pay_invoice_simple_main">
+        <t t-call="web.html_container">
+            <t t-set="data_report_landscape" t-value="True" />
+            <t t-set="full_width" t-value="True" />
+            <t t-foreach="docs" t-as="doc">
+                <t
+                    t-call="clog_account_payment_order_custom.print_pay_invoice_simple_document"
+                    t-lang="doc.generated_user_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+</odoo>
