@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="tms_route_form_view">
+        <field name="model">tms.route</field>
+        <field name="inherit_id" ref="tms.view_tms_route_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Parâmetros">
+                    <group>
+                        <group>
+                            <field name="clog_region_type" />
+                            <field name="clog_type" />
+                            <field name="clog_restricted" />
+                            <field name="clog_pickup" />
+                            <field name="clog_delivery" />
+                        </group>
+                        <group string="Deadlines and Quantities">
+                            <field name="clog_deadline1" />
+                            <field name="clog_deadline2" />
+                            <field name="clog_quantity" />
+                        </group>
+                        <group string="Values">
+                            <field name="clog_value_td" />
+                            <field name="clog_value_su" />
+                            <field name="clog_value_pickup" />
+                        </group>
+                        <field name="clog_square" />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+<!--
+    <record model="ir.ui.view" id="tms_route_search_view">
+        <field name="model">tms.route</field>
+        <field name="inherit_id" ref="TODO othermodule.search_view"/>
+        <field name="arch" type="xml">
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="tms_route_tree_view">
+        <field name="model">tms.route</field>
+        <field name="inherit_id" ref="TODO othermodule.tree_view"/>
+        <field name="arch" type="xml">
+
+        </field>
+    </record> -->
+
+</odoo>
