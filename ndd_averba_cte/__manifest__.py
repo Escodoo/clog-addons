@@ -16,6 +16,7 @@
     "data": [
         "views/document_view.xml",
         "views/ndd_averba_event.xml",
+        "views/res_company.xml",
         "security/ir.model.access.csv",
     ],
 }
