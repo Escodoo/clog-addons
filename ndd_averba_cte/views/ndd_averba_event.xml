@@ -35,6 +35,10 @@
                     </group>
                     <group>
                         <field name="endorsement_message" />
+                        <field
+                            name="error_message"
+                            attrs="{'invisible': [('error_message', '=', False)]}"
+                        />
                     </group>
                 </sheet>
             </form>

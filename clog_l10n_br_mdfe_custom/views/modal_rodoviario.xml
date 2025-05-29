@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Escodoo, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="modal_rodoviario_veiculo_condutor_form_view" model="ir.ui.view">
+        <field
+            name="name"
+        >modal.rodoviario.veiculo.condutor.form.view (in clog_l10n_br_mdfe_custom)</field>
+        <field name="model">l10n_br_mdfe.modal.rodoviario.veiculo.condutor</field>
+        <field
+            name="inherit_id"
+            ref="l10n_br_mdfe.modal_rodoviario_veiculo_condutor_form_view"
+        />
+        <field name="arch" type="xml">
+            <field name="mdfe30_xNome" position="before">
+                <field name="mdfe_motorista" required="1" />
+            </field>
+        </field>
+    </record>
+
+    <record id="modal_rodoviario_reboque_form_view" model="ir.ui.view">
+        <field
+            name="name"
+        >modal.rodoviario.reboque.form.view (in clog_l10n_br_mdfe_custom)</field>
+        <field name="model">l10n_br_mdfe.modal.rodoviario.reboque</field>
+        <field
+            name="inherit_id"
+            ref="l10n_br_mdfe.modal_rodoviario_reboque_form_view"
+        />
+        <field name="arch" type="xml">
+            <field name="mdfe30_cInt" position="before">
+                <field name="mdfe_veiculo_reboque" required="1" />
+            </field>
+            <field name="mdfe30_prop" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

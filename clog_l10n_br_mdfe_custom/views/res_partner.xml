@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Escodoo, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_res_partner_form_inherit_clog" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.clog</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page
+                    string="Risk Manager"
+                    attrs="{'invisible': [('tms_type', '!=', 'driver')]}"
+                >
+                    <group string="Risk Manager">
+                        <field name="risk_manager" />
+                        <field name="risk_manager_authorization_number" />
+                        <field name="risk_manager_expiration_date" />
+                        <field name="risk_manager_profile" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

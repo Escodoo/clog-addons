@@ -7,7 +7,12 @@
     "license": "AGPL-3",
     "author": "Escodoo",
     "website": "https://github.com/Escodoo/clog-addons",
-    "depends": ["fleet"],
+    "depends": [
+        "fleet",
+        "l10n_br_mdfe_spec",
+        "fleet_vehicle_capacity",
+        "fleet_vehicle_notebook",
+    ],
     "data": [
         "views/fleet_vehicle.xml",
     ],

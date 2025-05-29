@@ -1,0 +1,182 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* clog_fleet_custom
+#
+# Translators:
+# Wesley Oliveira <wesley.oliveira@escodoo.com.br>, 2025
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 14:11+0000\n"
+"PO-Revision-Date: 2025-05-30 14:11+0000\n"
+"Last-Translator: Wesley Oliveira, 2025\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpCar__01
+msgid "Aberta"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__risk_manager_authorization_number
+msgid "Authorization Number"
+msgstr "Número de Autorização"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__mdfe30_capKG
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle_model__mdfe30_capKG
+msgid "Capacidade em KG"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__mdfe30_capM3
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle_model__mdfe30_capM3
+msgid "Capacidade em M3"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpRod__03
+msgid "Cavalo Mecânico"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle_model__display_name
+msgid "Display Name"
+msgstr "Nome Exibido"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__risk_manager_expiration_date
+msgid "Expiration Date"
+msgstr "Data de Expiração"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpCar__02
+msgid "Fechada/Baú"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpCar__03
+msgid "Granelera"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle_model__id
+msgid "ID"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle_model____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: clog_fleet_custom
+#: model_terms:ir.ui.view,arch_db:clog_fleet_custom.fleet_vehicle_model_form_view
+msgid "MDF-e"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model,name:clog_fleet_custom.model_fleet_vehicle_model
+msgid "Model of a vehicle"
+msgstr "Modelo do veículo"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpRod__06
+msgid "Outros."
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpCar__04
+msgid "Porta Container"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__risk_manager_profile
+msgid "Profile"
+msgstr "Perfil (R$)"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__renavam
+msgid "RENAVAM"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__reference
+msgid "Reference"
+msgstr "Referência"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__risk_manager
+msgid "Risk Manager"
+msgstr "Gerenciadora de Risco"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpCar__05
+msgid "Sider"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__mdfe30_tara
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle_model__mdfe30_tara
+msgid "Tara em KG"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.constraint,message:clog_fleet_custom.constraint_fleet_vehicle_unique_reference
+msgid "The reference must be unique!"
+msgstr "A referência precisa ser única!"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__mdfe30_tpCar
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle_model__mdfe30_tpCar
+msgid "Tipo de Carroceria"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__mdfe30_tpRod
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle_model__mdfe30_tpRod
+msgid "Tipo do Rodado"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpRod__02
+msgid "Toco"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpRod__01
+msgid "Truck"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpRod__05
+msgid "Utilitário"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpRod__04
+msgid "VAN"
+msgstr ""
+
+#. module: clog_fleet_custom
+#: model:ir.model,name:clog_fleet_custom.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "Veículo"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields,field_description:clog_fleet_custom.field_fleet_vehicle__vehicle_state_id
+msgid "Vehicle State"
+msgstr "Estado do Veículo"
+
+#. module: clog_fleet_custom
+#: model:ir.model.fields.selection,name:clog_fleet_custom.selection__fleet_vehicle_model__mdfe30_tpCar__00
+msgid "não aplicável"
+msgstr ""

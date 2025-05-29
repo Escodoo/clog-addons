@@ -1,0 +1,138 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* clog_l10n_br_mdfe_custom
+#
+# Translators:
+# Wesley Oliveira <wesley.oliveira@escodoo.com.br>, 2025
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 14:11+0000\n"
+"PO-Revision-Date: 2025-05-30 14:11+0000\n"
+"Last-Translator: Wesley Oliveira, 2025\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_partner__risk_manager_authorization_number
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_users__risk_manager_authorization_number
+msgid "Authorization Number"
+msgstr "Número de Autorização"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model,name:clog_l10n_br_mdfe_custom.model_res_partner
+msgid "Contact"
+msgstr "Contato"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__mdfe_destino_prestacao
+msgid "Destino Prestação"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__display_name
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_mdfe_modal_rodoviario_reboque__display_name
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_mdfe_modal_rodoviario_veiculo_condutor__display_name
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nome Exibido"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_partner__risk_manager_expiration_date
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_users__risk_manager_expiration_date
+msgid "Expiration Date"
+msgstr "Data de Expiração"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model,name:clog_l10n_br_mdfe_custom.model_l10n_br_fiscal_document
+msgid "Fiscal Document"
+msgstr "Documento Fiscal"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__id
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_mdfe_modal_rodoviario_reboque__id
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_mdfe_modal_rodoviario_veiculo_condutor__id
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model,name:clog_l10n_br_mdfe_custom.model_l10n_br_mdfe_modal_rodoviario_reboque
+msgid "Informações de Reboque no Modal Rodoviário MDFe"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model,name:clog_l10n_br_mdfe_custom.model_l10n_br_mdfe_modal_rodoviario_veiculo_condutor
+msgid "Informações do Condutor no Modal Rodoviário MDFe"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document____last_update
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_mdfe_modal_rodoviario_reboque____last_update
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_mdfe_modal_rodoviario_veiculo_condutor____last_update
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_mdfe_modal_rodoviario_veiculo_condutor__mdfe_motorista
+msgid "Motorista"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_partner__risk_manager_profile
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_users__risk_manager_profile
+msgid "Profile"
+msgstr "Perfil (R$)"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_partner__risk_manager
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_res_users__risk_manager
+#: model_terms:ir.ui.view,arch_db:clog_l10n_br_mdfe_custom.view_res_partner_form_inherit_clog
+msgid "Risk Manager"
+msgstr "Gerenciadora de Risco"
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__mdfe_total_merc_seguro_proprio
+msgid "Total Mercadoria Cliente Seguro Próprio (RCFDC)"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__mdfe_total_merc_averbacao
+msgid "Total Mercadoria p/ Averbação"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__mdfe_nfe_count
+msgid "Total de Notas Fiscais"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__mdfe_freteCIF
+msgid "Valor Frete CIF"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__mdfe_freteFOB
+msgid "Valor Frete FOB"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__mdfe_freteTERC
+msgid "Valor Frete TERC"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_fiscal_document__mdfe_veiculo
+msgid "Veículo"
+msgstr ""
+
+#. module: clog_l10n_br_mdfe_custom
+#: model:ir.model.fields,field_description:clog_l10n_br_mdfe_custom.field_l10n_br_mdfe_modal_rodoviario_reboque__mdfe_veiculo_reboque
+msgid "Veículo Reboque"
+msgstr ""

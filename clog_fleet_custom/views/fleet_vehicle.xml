@@ -7,15 +7,36 @@
         <field name="name">fleet.vehicle.form (in clog_fleet_custom)</field>
         <field name="model">fleet.vehicle</field>
         <field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+        <field name="priority">20</field>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='tag_ids']" position="after">
                 <group>
                     <field name="reference" />
                 </group>
             </xpath>
+            <field name="company_id" position="after">
+                <field name="renavam" />
+                <field name="vehicle_state_id" />
+            </field>
+            <notebook position="inside">
+                <page string="MDF-e">
+                    <group>
+                        <field name="mdfe30_tpCar" />
+                        <field name="mdfe30_tpRod" />
+                        <field name="mdfe30_tara" />
+                        <field name="mdfe30_capKG" />
+                        <field name="mdfe30_capM3" />
+                    </group>
+                    <group string="Risk Manager">
+                        <field name="risk_manager" />
+                        <field name="risk_manager_authorization_number" />
+                        <field name="risk_manager_expiration_date" />
+                        <field name="risk_manager_profile" />
+                    </group>
+                </page>
+            </notebook>
         </field>
     </record>
-
 
     <record model="ir.ui.view" id="fleet_vehicle_tree_view">
         <field name="name">fleet.vehicle.tree (in clog_fleet_custom)</field>
@@ -25,6 +46,25 @@
             <xpath expr="//field[@name='model_id']" position="after">
                 <field name="reference" />
             </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="fleet_vehicle_model_form_view">
+        <field name="name">fleet.vehicle.model.form (in clog_fleet_custom)</field>
+        <field name="model">fleet.vehicle.model</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_model_view_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="MDF-e">
+                    <group>
+                        <field name="mdfe30_tpCar" />
+                        <field name="mdfe30_tpRod" />
+                        <field name="mdfe30_tara" />
+                        <field name="mdfe30_capKG" />
+                        <field name="mdfe30_capM3" />
+                    </group>
+                </page>
+            </notebook>
         </field>
     </record>
 
