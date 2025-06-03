@@ -205,11 +205,17 @@ msgid "NDD Averba CT-e"
 msgstr ""
 
 #. module: ndd_averba_cte
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_bank_statement_line__ndd_averba_date_send
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_move__ndd_averba_date_send
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_payment__ndd_averba_date_send
 #: model:ir.model.fields,field_description:ndd_averba_cte.field_l10n_br_fiscal_document__ndd_averba_date_send
 msgid "NDD Averba Date Send"
 msgstr ""
 
 #. module: ndd_averba_cte
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_bank_statement_line__ndd_averba_endorsement_state
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_move__ndd_averba_endorsement_state
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_payment__ndd_averba_endorsement_state
 #: model:ir.model.fields,field_description:ndd_averba_cte.field_l10n_br_fiscal_document__ndd_averba_endorsement_state
 msgid "NDD Averba Endorsement State"
 msgstr ""
@@ -220,6 +226,9 @@ msgid "NDD Averba Event"
 msgstr ""
 
 #. module: ndd_averba_cte
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_bank_statement_line__ndd_averba_event_ids
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_move__ndd_averba_event_ids
+#: model:ir.model.fields,field_description:ndd_averba_cte.field_account_payment__ndd_averba_event_ids
 #: model:ir.model.fields,field_description:ndd_averba_cte.field_l10n_br_fiscal_document__ndd_averba_event_ids
 msgid "NDD Averba Events"
 msgstr ""
