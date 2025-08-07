@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 - TODAY, Cristiano Mafra Junior <cristiano.mafra@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="res_company_form_view">
+        <field name="name">res.company.form (in atm_averba_base)</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Document Endorsement" name="document_endorsement">
+                    <group string="ATM Averba">
+                        <field name="atm_averba_environment" />
+                        <field name="atm_averba_user" />
+                        <field name="atm_averba_user_password" />
+                        <field name="atm_code" />
+                        <field name="atm_token" />
+                        <field name="atm_token_expiration" />
+                    </group>
+                    <button name="generate_atm_token"
+                        string="Gerar Token ATM"
+                        type="object"
+                        class="btn-primary"
+                    />
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
