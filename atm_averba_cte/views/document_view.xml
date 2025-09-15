@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 - TODAY, Cristiano Mafra Junior <cristiano.mafra@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="document_form_atm_averba" model="ir.ui.view">
+        <field name="name">l10n_br_fiscal.document.form (in atm_averba_cte)</field>
+        <field name="model">l10n_br_fiscal.document</field>
+        <field name="inherit_id" ref="l10n_br_fiscal.document_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="after">
+                <widget
+                    name="web_ribbon"
+                    title="Endorsed"
+                    attrs="{'invisible': [('atm_averba_endorsement_state', '!=', 'endorsed')]}"
+                />
+            </div>
+            <notebook position="inside">
+                <page
+                    string="ATM Endorsement"
+                    attrs="{'invisible': [('document_type', 'not in', ['57'])]}"
+                >
+                    <group string="ATM Averba CT-e">
+                        <group>
+                            <field
+                                name="atm_averba_endorsement_state"
+                                string="Endorsement State"
+                                widget="badge"
+                                decoration-success="atm_averba_endorsement_state == 'endorsed'"
+                                decoration-danger="atm_averba_endorsement_state == 'error'"
+                            />
+                            <field
+                                name="atm_averba_date_send"
+                                string="Date Send"
+                                readonly="1"
+                            />
+                        </group>
+                    </group>
+                    <field name="atm_averba_event_ids" readonly="1" />
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="document_tree_atm_averba" model="ir.ui.view">
+        <field name="name">l10n_br_fiscal.document.tree (in atm_averba_cte)</field>
+        <field name="model">l10n_br_fiscal.document</field>
+        <field name="inherit_id" ref="l10n_br_fiscal.document_tree" />
+        <field name="arch" type="xml">
+            <field name="state_fiscal" position="after">
+                <field
+                    name="atm_averba_endorsement_state"
+                    string="Endorsement State"
+                    widget="badge"
+                    decoration-success="atm_averba_endorsement_state == 'endorsed'"
+                    decoration-danger="atm_averba_endorsement_state == 'error'"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="atm_cte_endorsement_action" model="ir.actions.server">
+        <field name="name">Endorse CT-e (ATM)</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="l10n_br_fiscal.model_l10n_br_fiscal_document" />
+        <field
+            name="binding_model_id"
+            ref="l10n_br_fiscal.model_l10n_br_fiscal_document"
+        />
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">action = records.cte_endorsement()</field>
+    </record>
+
+    <record id="atm_cancel_cte_endorsement_action" model="ir.actions.server">
+        <field name="name">Cancel CT-e Endorsement (ATM)</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="l10n_br_fiscal.model_l10n_br_fiscal_document" />
+        <field
+            name="binding_model_id"
+            ref="l10n_br_fiscal.model_l10n_br_fiscal_document"
+        />
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">action = records.cancel_cte_endorsement()</field>
+    </record>
+
+</odoo>
