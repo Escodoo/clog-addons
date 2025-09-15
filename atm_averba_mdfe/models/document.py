@@ -195,11 +195,25 @@ class Document(models.Model):
                     )
                     % (document.display_name, document.atm_averba_endorsement_state)
                 )
-            xml_content = self._get_mdfe_event(document, "2")
-            if not xml_content:
-                raise UserError(_("Não encontrei o evento de cancelamento."))
-
-            content = self._post_mdfe_to_atm(xml_content.encode("utf-8"))
+            try:
+                evento_assinado_bytes, soap_bytes = self._get_mdfe_event_files(
+                    document, "2"
+                )
+            except UserError:
+                xml_content = self._get_mdfe_event(document, "2")
+                if not xml_content:
+                    raise UserError(_("Não encontrei o evento de cancelamento."))
+                content = self._post_mdfe_to_atm(
+                    xml_content.encode("utf-8"), content_type="application/xml"
+                )
+                self.env["atm.averba.event"].create_event_mdfe(
+                    document, content, cancel=True
+                )
+                continue
+            proc_bytes = self.build_proc_evento_mdfe_v3(
+                evento_assinado_bytes, soap_bytes, normalize_seq=True
+            )
+            content = self._post_mdfe_to_atm(proc_bytes, content_type="application/xml")
             self.env["atm.averba.event"].create_event_mdfe(
                 document, content, cancel=True
             )
@@ -208,6 +222,8 @@ class Document(models.Model):
         event = self.env["l10n_br_fiscal.event"].search(
             [("document_id", "=", document.id), ("type", "=", type_string)], limit=1
         )
+        if not event:
+            raise UserError(_("Não encontrei evento para este documento."))
         xml_file = event.file_request_id or event.file_response_id
         if not xml_file:
             raise UserError(_("Não encontrei evento para este documento."))

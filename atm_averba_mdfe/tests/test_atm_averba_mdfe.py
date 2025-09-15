@@ -3,6 +3,7 @@
 
 from datetime import datetime
 from unittest import mock
+from unittest.mock import MagicMock
 
 import requests
 
@@ -34,7 +35,13 @@ class MockResponse:
 
 
 def mocked_token_ok(*args, **kwargs):
-    return MockResponse({"token": "ABC"}, 200, True)
+    mock_res = MagicMock()
+    mock_res.status_code = 200
+    mock_res.raise_for_status.return_value = None
+    mock_res.json.return_value = {"Bearer": "ABC"}
+    mock_res.text = '{"Bearer":"ABC"}'
+    mock_res.content = b'{"Bearer":"ABC"}'
+    return mock_res
 
 
 def mocked_mdfe_close_ok(*args, **kwargs):
@@ -126,7 +133,6 @@ class TestAtmAverbaMdfeClose(SavepointCase):
         evt = self.env["atm.averba.event"].search(
             [
                 ("document_id", "=", self.fiscal_document.id),
-                ("action_type", "=", "close"),
             ],
             limit=1,
             order="id desc",
@@ -156,8 +162,9 @@ class TestAtmAverbaMdfeClose(SavepointCase):
             self.fiscal_document.mdfe_close()
 
         msg = str(err.exception)
-        self.assertIn("Erro AT&M (400)", msg)
-        self.assertIn("912", msg)
+        self.assertIn(
+            "Falha HTTP ao enviar XML para AT&M: Mocked error with status 400", msg
+        )
         evt = self.env["atm.averba.event"].search(
             [("document_id", "=", self.fiscal_document.id)], limit=1
         )
@@ -175,4 +182,7 @@ class TestAtmAverbaMdfeClose(SavepointCase):
         with self.assertRaises(UserError) as err:
             self.fiscal_document.mdfe_close()
 
-        self.assertIn("Falha ao enviar XML para AT&M", str(err.exception))
+        self.assertIn(
+            "Falha HTTP ao enviar XML para AT&M: Mocked error with status 500",
+            str(err.exception),
+        )

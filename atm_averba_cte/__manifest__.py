@@ -13,7 +13,6 @@
     "depends": [
         "atm_averba_base",
         "l10n_br_fiscal_edi",
-        "l10n_br_cte",
     ],
     "data": [
         "views/document_view.xml",
