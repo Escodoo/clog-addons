@@ -129,6 +129,7 @@ class TestAtmAverbaMdfeClose(SavepointCase):
         return_value=b"<procEventoMDFe/>",
     )
     def test_mdfe_close_success(self, mock_build_proc, mock_post):
+        self.fiscal_document.atm_averba_endorsement_state = "endorsed"
         self.fiscal_document.mdfe_close()
         evt = self.env["atm.averba.event"].search(
             [
@@ -138,7 +139,7 @@ class TestAtmAverbaMdfeClose(SavepointCase):
             order="id desc",
         )
         self.assertTrue(evt, "Evento de averbação não foi criado.")
-        self.assertEqual(evt.endorsement_state, "endorsed")
+        self.assertEqual(evt.endorsement_state, "encerrado")
         self.assertEqual(evt.protocol_number, "PROTO-123456")
         self.assertEqual(evt.endorsement_message, "Documento ja encerrado")
         self.assertEqual(
@@ -147,7 +148,7 @@ class TestAtmAverbaMdfeClose(SavepointCase):
         )
         self.fiscal_document._compute_atm_averba_event_ids()
         self.fiscal_document._compute_atm_averba_endorsement_state()
-        self.assertEqual(self.fiscal_document.atm_averba_endorsement_state, "endorsed")
+        self.assertEqual(self.fiscal_document.atm_averba_endorsement_state, "encerrado")
 
     @mock.patch(
         "requests.post",
@@ -158,6 +159,7 @@ class TestAtmAverbaMdfeClose(SavepointCase):
         return_value=b"<procEventoMDFe/>",
     )
     def test_mdfe_close_http_400(self, mock_build_proc, mock_post):
+        self.fiscal_document.atm_averba_endorsement_state = "endorsed"
         with self.assertRaises(UserError) as err:
             self.fiscal_document.mdfe_close()
 
@@ -179,6 +181,7 @@ class TestAtmAverbaMdfeClose(SavepointCase):
         return_value=b"<procEventoMDFe/>",
     )
     def test_mdfe_close_http_500(self, mock_build_proc, mock_post):
+        self.fiscal_document.atm_averba_endorsement_state = "endorsed"
         with self.assertRaises(UserError) as err:
             self.fiscal_document.mdfe_close()
 

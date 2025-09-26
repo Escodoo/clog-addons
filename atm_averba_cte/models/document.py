@@ -4,9 +4,13 @@
 import base64
 
 import requests
+from lxml import etree
 
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
+
+CTE_NS = "http://www.portalfiscal.inf.br/cte"
+NS = {"cte": CTE_NS}
 
 
 class Document(models.Model):
@@ -117,6 +121,45 @@ class Document(models.Model):
                     except requests.RequestException as e:
                         raise UserError(_("Falha ao enviar XML para AT&M: %s") % str(e))
 
+    def build_ret_canc_cte(self, xml_str: str) -> str:
+        root = etree.fromstring(xml_str.encode("utf-8"))
+        ret = root.find(".//cte:retEventoCTe", namespaces=NS)
+        if ret is None:
+            raise ValueError("retEventoCTe não encontrado no XML.")
+
+        inf = ret.find("./cte:infEvento", namespaces=NS)
+        if inf is None:
+            inf = ret.find("./cte:retInfEvento", namespaces=NS)
+
+        def _txt(tag):
+            el = inf.find(f"./cte:{tag}", namespaces=NS)
+            return (el.text or "").strip() if el is not None else ""
+
+        tpAmb = _txt("tpAmb") or "2"
+        cUF = _txt("cOrgao") or "35"
+        chCTe = _txt("chCTe")
+        dhRegEvento = _txt("dhRegEvento")
+        nProt = _txt("nProt")
+        xMotivo = _txt("xMotivo")
+
+        retCanc = etree.Element(f"{{{CTE_NS}}}retCancCTe", nsmap={None: CTE_NS})
+        retCanc.set("versao", "1.04")
+        infCanc = etree.SubElement(retCanc, f"{{{CTE_NS}}}infCanc")
+        etree.SubElement(infCanc, f"{{{CTE_NS}}}tpAmb").text = tpAmb
+        etree.SubElement(infCanc, f"{{{CTE_NS}}}cUF").text = cUF
+        etree.SubElement(infCanc, f"{{{CTE_NS}}}verAplic").text = "99"
+        etree.SubElement(infCanc, f"{{{CTE_NS}}}cStat").text = "101"
+        etree.SubElement(infCanc, f"{{{CTE_NS}}}xMotivo").text = xMotivo
+        etree.SubElement(infCanc, f"{{{CTE_NS}}}chCTe").text = chCTe
+        if dhRegEvento:
+            etree.SubElement(infCanc, f"{{{CTE_NS}}}dhRecbto").text = dhRegEvento
+        if nProt:
+            etree.SubElement(infCanc, f"{{{CTE_NS}}}nProt").text = nProt
+
+        return etree.tostring(retCanc, encoding="utf-8", xml_declaration=True).decode(
+            "utf-8"
+        )
+
     def cancel_cte_endorsement(self):
         for document in self:
             if (
@@ -132,16 +175,23 @@ class Document(models.Model):
 
                         headers = {
                             "Authorization": f"Bearer {token}",
+                            "Accept": "application/json",
+                            "Content-Type": "application/xml",
                         }
 
-                        cancel_url = env_data["url"] + "/cancelamento"
+                        xml_content = base64.b64decode(cancel_file.datas).decode(
+                            "utf-8"
+                        )
+                        xml_content = self.build_ret_canc_cte(xml_content)
+                        cancel_url = env_data["url"].rstrip("/")
 
                         response = requests.post(
                             url=cancel_url,
                             headers=headers,
-                            data={"xml": cancel_file.datas},
+                            data=xml_content,
+                            timeout=20,
                         )
-
+                        response.raise_for_status()
                         content = response.json()
                         self.env["atm.averba.event"].create_event(
                             document, content, cancel=True

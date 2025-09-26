@@ -18,12 +18,12 @@ msgstr ""
 #. module: atm_averba_mdfe
 #: model:ir.model,name:atm_averba_mdfe.model_atm_averba_event
 msgid "AT&M Averba Event"
-msgstr ""
+msgstr "Evento de Averbação AT&M"
 
 #. module: atm_averba_mdfe
 #: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
 msgid "ATM Averba MDF-e"
-msgstr ""
+msgstr "Averbação MDF-e AT&M"
 
 #. module: atm_averba_mdfe
 #: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
@@ -33,28 +33,28 @@ msgstr ""
 #. module: atm_averba_mdfe
 #: model:ir.actions.server,name:atm_averba_mdfe.atm_mdfe_cancel_action
 msgid "Cancel MDF-e (ATM)"
-msgstr ""
+msgstr "Cancelar MDF-e (AT&M)"
 
 #. module: atm_averba_mdfe
 #: model:ir.actions.server,name:atm_averba_mdfe.atm_mdfe_close_action
 msgid "Close MDF-e (ATM)"
-msgstr ""
+msgstr "Encerrar MDF-e (AT&M)"
 
 #. module: atm_averba_mdfe
 #: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
 msgid "Date Send"
-msgstr ""
+msgstr "Data de Envio"
 
 #. module: atm_averba_mdfe
 #: model:ir.actions.server,name:atm_averba_mdfe.atm_mdfe_declare_action
 msgid "Declare MDF-e (ATM)"
-msgstr ""
+msgstr "Declarar MDF-e (AT&M)"
 
 #. module: atm_averba_mdfe
 #: model:ir.model.fields,field_description:atm_averba_mdfe.field_atm_averba_event__display_name
 #: model:ir.model.fields,field_description:atm_averba_mdfe.field_l10n_br_fiscal_document__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome de Exibição"
 
 #. module: atm_averba_mdfe
 #: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
@@ -89,7 +89,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:atm_averba_mdfe.field_atm_averba_event____last_update
 #: model:ir.model.fields,field_description:atm_averba_mdfe.field_l10n_br_fiscal_document____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificação em"
 
 #. module: atm_averba_mdfe
 #: code:addons/atm_averba_mdfe/models/document.py:0

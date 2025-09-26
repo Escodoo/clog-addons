@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 14:24+0000\n"
-"PO-Revision-Date: 2025-08-27 14:24+0000\n"
+"POT-Creation-Date: 2025-10-13 12:44+0000\n"
+"PO-Revision-Date: 2025-10-13 12:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,39 +16,39 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: atm_averba_mdfe
+#: model:ir.model.fields,field_description:atm_averba_mdfe.field_l10n_br_fiscal_document__atm_averba_endorsement_state
+msgid "AT&M Averba Endorsement State"
+msgstr "Status de Averbação AT&M"
+
+#. module: atm_averba_mdfe
 #: model:ir.model,name:atm_averba_mdfe.model_atm_averba_event
 msgid "AT&M Averba Event"
-msgstr ""
+msgstr "Evento de Averbação AT&M"
 
 #. module: atm_averba_mdfe
 #: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
 msgid "ATM Averba MDF-e"
-msgstr ""
+msgstr "Averbação MDF-e (AT&M)"
 
 #. module: atm_averba_mdfe
 #: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
-msgid "ATM Endorsement"
+msgid "ATM MDF-e"
 msgstr ""
 
 #. module: atm_averba_mdfe
 #: model:ir.actions.server,name:atm_averba_mdfe.atm_mdfe_cancel_action
 msgid "Cancel MDF-e (ATM)"
-msgstr ""
+msgstr "Cancelar MDF-e (AT&M)"
 
 #. module: atm_averba_mdfe
 #: model:ir.actions.server,name:atm_averba_mdfe.atm_mdfe_close_action
 msgid "Close MDF-e (ATM)"
-msgstr ""
+msgstr "Encerrar MDF-e (AT&M)"
 
 #. module: atm_averba_mdfe
 #: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
 msgid "Date Send"
-msgstr ""
-
-#. module: atm_averba_mdfe
-#: model:ir.actions.server,name:atm_averba_mdfe.atm_mdfe_declare_action
-msgid "Declare MDF-e (ATM)"
-msgstr ""
+msgstr "Data de Envio"
 
 #. module: atm_averba_mdfe
 #: model:ir.model.fields,field_description:atm_averba_mdfe.field_atm_averba_event__display_name
@@ -57,21 +57,55 @@ msgid "Display Name"
 msgstr "Nome Exibido"
 
 #. module: atm_averba_mdfe
-#: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
-msgid "Endorsed"
+#: model:ir.model.fields.selection,name:atm_averba_mdfe.selection__atm_averba_event__endorsement_state__encerrado
+#: model:ir.model.fields.selection,name:atm_averba_mdfe.selection__l10n_br_fiscal_document__atm_averba_endorsement_state__encerrado
+msgid "Encerrado"
 msgstr ""
 
 #. module: atm_averba_mdfe
 #: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
+msgid "Endorsed"
+msgstr "Averbado"
+
+#. module: atm_averba_mdfe
+#: model:ir.actions.server,name:atm_averba_mdfe.atm_mdfe_endorsement_action
+msgid "Endorsement MDF-e (ATM)"
+msgstr ""
+
+#. module: atm_averba_mdfe
+#: model:ir.model.fields,field_description:atm_averba_mdfe.field_atm_averba_event__endorsement_message
+msgid "Endorsement Message"
+msgstr "Averbar MDF-e (AT&M)"
+
+#. module: atm_averba_mdfe
+#: model:ir.model.fields,field_description:atm_averba_mdfe.field_atm_averba_event__endorsement_state
+#: model_terms:ir.ui.view,arch_db:atm_averba_mdfe.document_form_atm_averba
 msgid "Endorsement State"
+msgstr "Status de Averbação"
+
+#. module: atm_averba_mdfe
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#, python-format
+msgid "Erro AT&M (%s)."
 msgstr ""
 
 #. module: atm_averba_mdfe
 #: code:addons/atm_averba_mdfe/models/document.py:0
 #, python-format
-msgid ""
-"Falha ao enviar XML para AT&M: %s\n"
-"%s"
+msgid "Erro AT&M (%s): %s"
+msgstr ""
+
+#. module: atm_averba_mdfe
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#, python-format
+msgid "Falha HTTP ao enviar XML para AT&M: %s"
+msgstr ""
+
+#. module: atm_averba_mdfe
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#, python-format
+msgid "Falha ao enviar XML para AT&M: %s"
 msgstr ""
 
 #. module: atm_averba_mdfe
@@ -93,18 +127,52 @@ msgstr "Última Modificação em"
 
 #. module: atm_averba_mdfe
 #: code:addons/atm_averba_mdfe/models/document.py:0
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#: code:addons/atm_averba_mdfe/models/document.py:0
 #, python-format
-msgid "MDF-e sem XML protocolado para enviar à AT&M."
+msgid "Não encontrei evento para este documento."
 msgstr ""
 
 #. module: atm_averba_mdfe
 #: code:addons/atm_averba_mdfe/models/document.py:0
 #, python-format
-msgid "XML de cancelamento do MDF-e não encontrado."
+msgid "Não encontrei o XML assinado do evento (file_request_id)."
 msgstr ""
 
 #. module: atm_averba_mdfe
 #: code:addons/atm_averba_mdfe/models/document.py:0
 #, python-format
-msgid "XML de encerramento do MDF-e não encontrado."
+msgid "Não encontrei o evento de cancelamento."
+msgstr ""
+
+#. module: atm_averba_mdfe
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#, python-format
+msgid "Não encontrei o retorno do evento (file_response_id)."
+msgstr ""
+
+#. module: atm_averba_mdfe
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#, python-format
+msgid ""
+"O MDF-e %s já foi averbado (estado: %s). Não é possível enviar novamente."
+msgstr ""
+
+#. module: atm_averba_mdfe
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#, python-format
+msgid "Resposta inesperada da AT&M (sem JSON)."
+msgstr ""
+
+#. module: atm_averba_mdfe
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#, python-format
+msgid "Retorno (SOAP) do evento está vazio."
+msgstr ""
+
+#. module: atm_averba_mdfe
+#: code:addons/atm_averba_mdfe/models/document.py:0
+#, python-format
+msgid "XML assinado do evento está vazio."
 msgstr ""

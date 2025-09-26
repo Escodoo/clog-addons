@@ -38,6 +38,13 @@ class AtmAverbaEvent(models.Model):
     def create_event(self, document, response, cancel=False):
         dados_seguro = response.get("Averbado", {}).get("DadosSeguro", [{}])[0]
         TpMov = dados_seguro.get("TpMov")
+        declarado = response.get("Declarado", {})
+        protocolo = declarado.get("Protocolo")
+        infos = response.get("Infos", {}).get("Info", [])
+        if infos:
+            primeira_info = infos[0]
+            primeira_info.get("Codigo")
+            descricao = primeira_info.get("Descricao")
         infos = response.get("Infos", {}).get("Info", [])
 
         vals = {
@@ -46,12 +53,26 @@ class AtmAverbaEvent(models.Model):
             "date": datetime.now(),
         }
 
-        if TpMov == "2" and cancel:
+        if cancel or TpMov == "2":
             vals.update(
                 {
                     "endorsement_state": "cancel",
-                    "amount": float(dados_seguro.get("ValorAverbado", 0)),
-                    "total_insured": float(dados_seguro.get("ValorAverbado", 0)),
+                    "cte_id": document.authorization_event_id.id,
+                    "document_number": response.get("Numero"),
+                    "protocol_number": response.get("Averbado", {}).get("Protocolo"),
+                    "amount": float(dados_seguro.get("ValorAverbado", 0) or 0),
+                    "total_insured": float(dados_seguro.get("ValorAverbado", 0) or 0),
+                }
+            )
+        elif protocolo == "TESTE" or descricao == "Documento ja cadastrado":
+            vals.update(
+                {
+                    "endorsement_state": "endorsed",
+                    "cte_id": document.authorization_event_id.id,
+                    "document_number": response.get("Numero"),
+                    "protocol_number": response.get("Averbado", {}).get("Protocolo"),
+                    "amount": float(dados_seguro.get("ValorAverbado", 0) or 0),
+                    "total_insured": float(dados_seguro.get("ValorAverbado", 0) or 0),
                 }
             )
         elif TpMov == "1":

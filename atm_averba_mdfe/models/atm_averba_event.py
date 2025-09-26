@@ -10,6 +10,12 @@ class AtmAverbaEvent(models.Model):
 
     endorsement_message = fields.Text()
 
+    endorsement_state = fields.Selection(
+        selection_add=[
+            ("encerrado", "Encerrado"),
+        ],
+    )
+
     def create_event_mdfe(  # noqa: C901
         self, document, response, *, cancel=False, close=False
     ):
@@ -66,7 +72,7 @@ class AtmAverbaEvent(models.Model):
         if declarado_list:
             vals.update(
                 {
-                    "endorsement_state": "cancel" if cancel else "endorsed",
+                    "endorsement_state": "cancel" if cancel else "encerrado",
                     "endorsement_message": infos_list[0].get("Descricao", "")
                     if infos_list
                     else "",

@@ -6,7 +6,7 @@ import base64
 import requests
 from lxml import etree
 
-from odoo import _, models
+from odoo import _, fields, models
 from odoo.exceptions import UserError
 
 from ..constants.atm_averba_mdfe import (
@@ -20,6 +20,12 @@ from ..constants.atm_averba_mdfe import (
 
 class Document(models.Model):
     _inherit = "l10n_br_fiscal.document"
+
+    atm_averba_endorsement_state = fields.Selection(
+        selection_add=[
+            ("encerrado", "Encerrado"),
+        ],
+    )
 
     @staticmethod
     def _parse_xml_bytes(xml_bytes):
@@ -163,13 +169,20 @@ class Document(models.Model):
         for document in self:
             if document.document_type_id.code != "58":
                 continue
-            if document.atm_averba_endorsement_state in ("endorsed", "cancel"):
+            state = document.atm_averba_endorsement_state or ""
+            if state == "encerrado":
                 raise UserError(
-                    _(
-                        "O MDF-e %s já foi averbado (estado: %s). "
-                        "Não é possível enviar novamente."
-                    )
-                    % (document.display_name, document.atm_averba_endorsement_state)
+                    _("O MDF-e %s já está encerrado na AT&M.") % document.display_name
+                )
+            if state == "cancel":
+                raise UserError(
+                    _("O MDF-e %s foi cancelado e não pode ser encerrado.")
+                    % document.display_name
+                )
+            if state != "endorsed":
+                raise UserError(
+                    _("O MDF-e %s ainda não foi declarado na AT&M.")
+                    % document.display_name
                 )
 
             evento_assinado_bytes, soap_bytes = self._get_mdfe_event_files(
@@ -187,13 +200,23 @@ class Document(models.Model):
         for document in self:
             if document.document_type_id.code != "58":
                 continue
-            if document.atm_averba_endorsement_state in ("endorsed", "cancel"):
+            state = document.atm_averba_endorsement_state or ""
+            if state == "cancel":
+                raise UserError(
+                    _("O MDF-e %s já está cancelado na AT&M.") % document.display_name
+                )
+            if state == "encerrado":
+                raise UserError(
+                    _("O MDF-e %s já foi encerrado na AT&M e não pode ser cancelado.")
+                    % document.display_name
+                )
+            if state != "endorsed":
                 raise UserError(
                     _(
-                        "O MDF-e %s já foi averbado (estado: %s). "
-                        "Não é possível enviar novamente."
+                        "O MDF-e %s ainda não foi declarado na AT&M. "
+                        "Declare primeiro para depois cancelar."
                     )
-                    % (document.display_name, document.atm_averba_endorsement_state)
+                    % document.display_name
                 )
             try:
                 evento_assinado_bytes, soap_bytes = self._get_mdfe_event_files(
@@ -217,6 +240,39 @@ class Document(models.Model):
             self.env["atm.averba.event"].create_event_mdfe(
                 document, content, cancel=True
             )
+
+    def mdfe_endorsement(self):
+        for document in self:
+            if (
+                document.document_type_id.code == "58"
+                and document.atm_averba_endorsement_state not in ("endorsed", "cancel")
+            ):
+                xml_file = document.authorization_file_id or document.send_file_id
+                if xml_file and xml_file.datas:
+                    try:
+                        document.company_id.get_atm_averba_environment()
+                        token = document.company_id.generate_atm_token()
+
+                        headers = {
+                            "Authorization": f"Bearer {token}",
+                            "Accept": "application/json",
+                            "Content-Type": "application/xml",
+                        }
+
+                        xml_content = base64.b64decode(xml_file.datas).decode("utf-8")
+
+                        response = requests.post(
+                            url=MDFE_URL,
+                            headers=headers,
+                            data=xml_content,
+                            timeout=20,
+                        )
+                        response.raise_for_status()
+                        content = response.json()
+                        self.env["atm.averba.event"].create_event(document, content)
+
+                    except requests.RequestException as e:
+                        raise UserError(_("Falha ao enviar XML para AT&M: %s") % str(e))
 
     def _get_mdfe_event(self, document, type_string):
         event = self.env["l10n_br_fiscal.event"].search(

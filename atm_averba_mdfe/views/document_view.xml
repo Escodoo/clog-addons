@@ -26,8 +26,9 @@
                                 name="atm_averba_endorsement_state"
                                 string="Endorsement State"
                                 widget="badge"
-                                decoration-success="atm_averba_endorsement_state == 'endorsed'"
+                                decoration-success="atm_averba_endorsement_state == 'encerrado'"
                                 decoration-danger="atm_averba_endorsement_state == 'error'"
+                                decoration-info="atm_averba_endorsement_state == 'cancel'"
                             />
                             <field
                                 name="atm_averba_date_send"
@@ -79,6 +80,19 @@
         <field name="binding_view_types">list,form</field>
         <field name="state">code</field>
         <field name="code">action = records.mdfe_cancel()</field>
+    </record>
+
+    <record id="atm_mdfe_endorsement_action" model="ir.actions.server">
+        <field name="name">Endorsement MDF-e (ATM)</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="l10n_br_fiscal.model_l10n_br_fiscal_document" />
+        <field
+            name="binding_model_id"
+            ref="l10n_br_fiscal.model_l10n_br_fiscal_document"
+        />
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">action = records.mdfe_endorsement()</field>
     </record>
 
 </odoo>
