@@ -36,16 +36,17 @@ class AtmAverbaEvent(models.Model):
     policy_number = fields.Char(string="Policy Number")
 
     def create_event(self, document, response, cancel=False):
-        dados_seguro = response.get("Averbado", {}).get("DadosSeguro", [{}])[0]
-        TpMov = dados_seguro.get("TpMov")
-        declarado = response.get("Declarado", {})
-        protocolo = declarado.get("Protocolo")
-        infos = response.get("Infos", {}).get("Info", [])
-        if infos:
-            primeira_info = infos[0]
-            primeira_info.get("Codigo")
-            descricao = primeira_info.get("Descricao")
-        infos = response.get("Infos", {}).get("Info", [])
+        dados_seguro_list = response.get("Averbado", {}).get("DadosSeguro", [{}]) or [
+            {}
+        ]
+        dados_seguro = dados_seguro_list[0] or {}
+
+        TpMov = (dados_seguro.get("TpMov") or "").strip()
+        declarado = response.get("Declarado", {}) or {}
+        protocolo = (declarado.get("Protocolo") or "").strip()
+
+        infos = (response.get("Infos", {}) or {}).get("Info", []) or []
+        descricao = (infos[0].get("Descricao") if infos else "") or ""
 
         vals = {
             "company_id": document.company_id.id,
@@ -59,40 +60,49 @@ class AtmAverbaEvent(models.Model):
                     "endorsement_state": "cancel",
                     "cte_id": document.authorization_event_id.id,
                     "document_number": response.get("Numero"),
-                    "protocol_number": response.get("Averbado", {}).get("Protocolo"),
-                    "amount": float(dados_seguro.get("ValorAverbado", 0) or 0),
-                    "total_insured": float(dados_seguro.get("ValorAverbado", 0) or 0),
+                    "protocol_number": (response.get("Averbado", {}) or {}).get(
+                        "Protocolo"
+                    ),
+                    "amount": float(dados_seguro.get("ValorAverbado") or 0),
+                    "total_insured": float(dados_seguro.get("ValorAverbado") or 0),
                 }
             )
+
         elif protocolo == "TESTE" or descricao == "Documento ja cadastrado":
             vals.update(
                 {
                     "endorsement_state": "endorsed",
                     "cte_id": document.authorization_event_id.id,
                     "document_number": response.get("Numero"),
-                    "protocol_number": response.get("Averbado", {}).get("Protocolo"),
-                    "amount": float(dados_seguro.get("ValorAverbado", 0) or 0),
-                    "total_insured": float(dados_seguro.get("ValorAverbado", 0) or 0),
+                    "protocol_number": (response.get("Averbado", {}) or {}).get(
+                        "Protocolo"
+                    ),
+                    "amount": float(dados_seguro.get("ValorAverbado") or 0),
+                    "total_insured": float(dados_seguro.get("ValorAverbado") or 0),
                 }
             )
+
         elif TpMov == "1":
             vals.update(
                 {
                     "endorsement_state": "endorsed",
                     "cte_id": document.authorization_event_id.id,
                     "document_number": response.get("Numero"),
-                    "protocol_number": response.get("Averbado", {}).get("Protocolo"),
+                    "protocol_number": (response.get("Averbado", {}) or {}).get(
+                        "Protocolo"
+                    ),
                     "endorsement_number": dados_seguro.get("NumeroAverbacao"),
-                    "amount": float(dados_seguro.get("ValorAverbado", 0)),
-                    "total_insured": float(dados_seguro.get("ValorAverbado", 0)),
+                    "amount": float(dados_seguro.get("ValorAverbado") or 0),
+                    "total_insured": float(dados_seguro.get("ValorAverbado") or 0),
                     "insurance_company": dados_seguro.get("NomeSeguradora"),
                     "insurance_company_cnpj": dados_seguro.get("CNPJSeguradora"),
                     "policy_number": dados_seguro.get("NumApolice"),
                 }
             )
+
         elif infos:
             error_message = "\n".join(
-                f"{info.get('Codigo')}: {info.get('Descricao')}" for info in infos
+                f"{i.get('Codigo')}: {i.get('Descricao')}" for i in infos
             )
             vals.update(
                 {
@@ -101,6 +111,7 @@ class AtmAverbaEvent(models.Model):
                     "error_message": error_message,
                 }
             )
+
         else:
             vals.update(
                 {
