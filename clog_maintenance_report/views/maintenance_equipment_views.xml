@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="clog_maintenance_equipment_vehicle_fields_view" model="ir.ui.view">
+        <field name="name">clog.maintenance.equipment.vehicle.fields</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='product_information']/group/group[2]/field[@name='warranty_date']"
+                position="after"
+            >
+                <field name="fleet_code" />
+                <field name="year_model" />
+                <field name="license_plate" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="clog_maintenance_equipment_vehicle_fields_tree_view" model="ir.ui.view">
+        <field name="name">clog.maintenance.equipment.vehicle.fields.tree</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='serial_no']" position="after">
+                <field name="fleet_code" />
+                <field name="year_model" />
+                <field name="license_plate" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
