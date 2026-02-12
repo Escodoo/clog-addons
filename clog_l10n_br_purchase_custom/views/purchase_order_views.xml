@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Cristiano Mafra Junior <cristiano.mafra@escodoo.com.br>
+      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_purchase_order_form_inherit_maintenance_type" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.maintenance.type</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//group/group[1]" position="inside">
+                <field name="maintenance_type" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
