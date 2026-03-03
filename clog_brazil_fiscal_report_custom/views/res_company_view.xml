@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <!-- Campo DACTE: depois das margens do DACTE na aba CT-e -->
+    <record id="view_company_form_brazil_fiscal_report_cte" model="ir.ui.view">
+        <field name="name">res.company.form (Brazil Fiscal Report DACTE)</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="l10n_br_cte.cte_res_company_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='cte']/group[@name='dacte_settings']/group/field[last()]"
+                position="after"
+            >
+                <field name="dacte_display_ibs_cbs" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Campo DAMDFE: depois das margens do DAMDFE na aba MDF-e -->
+    <record id="view_company_form_brazil_fiscal_report_mdfe" model="ir.ui.view">
+        <field name="name">res.company.form (Brazil Fiscal Report DAMDFE)</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="l10n_br_mdfe.res_company_form_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='mdfe']/group[@name='damdfe_settings']/group/field[last()]"
+                position="after"
+            >
+                <field name="damdfe_display_origem_destino_prestacao" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
