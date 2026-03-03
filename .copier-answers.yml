@@ -1,6 +1,7 @@
 # Do NOT update manually; changes here will be overwritten by Copier
-_commit: v1.30
+_commit: v1.39
 _src_path: gh:oca/oca-addons-repo-template
+additional_ruff_rules: []
 ci: GitHub
 convert_readme_fragments_to_markdown: false
 enable_checklog_odoo: false
@@ -22,5 +23,5 @@ repo_name: CLog Addons
 repo_slug: clog-addons
 repo_website: https://github.com/Escodoo/clog-addons
 use_pyproject_toml: false
-use_ruff: false
+use_ruff: true
 

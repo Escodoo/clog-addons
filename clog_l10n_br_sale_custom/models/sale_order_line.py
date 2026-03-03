@@ -5,12 +5,12 @@ from odoo import models
 
 
 class SaleOrderLine(models.Model):
-
     _inherit = "sale.order.line"
 
     def _get_fiscal_partner(self):
         """
-        Returns the fiscal partner by searching all many2one fields for a related document
+        Returns the fiscal partner by searching all many2one
+        fields for a related document
         with partner_shipping_id or partner_id.
         """
         self.ensure_one()

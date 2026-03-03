@@ -7,7 +7,6 @@ from odoo import fields, models
 
 
 class NddAverbaEvent(models.Model):
-
     _name = "ndd.averba.event"
     _description = "NDD Averba Event"
     _order = "date desc"
