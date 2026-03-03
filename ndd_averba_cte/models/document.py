@@ -10,7 +10,6 @@ from odoo.exceptions import UserError
 
 
 class Document(models.Model):
-
     _inherit = "l10n_br_fiscal.document"
 
     ndd_averba_event_ids = fields.Many2many(
@@ -126,7 +125,8 @@ class Document(models.Model):
                     except requests.HTTPError as e:
                         raise UserError(
                             _(
-                                "Failed to send cancelation request to NDD Averba API: %s"
+                                "Failed to send cancelation request to "
+                                "NDD Averba API: %s"
                             )
                             % e
                         ) from e

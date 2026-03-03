@@ -13,7 +13,6 @@ from ..constants.ndd_averba import (
 
 
 class ResCompany(models.Model):
-
     _inherit = "res.company"
 
     ndd_averba_environment = fields.Selection(
