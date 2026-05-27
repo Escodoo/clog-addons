@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="l10n_br_fiscal_document_form_view">
+        <field name="name">l10n_br_fiscal.document.form (in dominio_fiscal)</field>
+        <field name="model">l10n_br_fiscal.document</field>
+        <field name="inherit_id" ref="l10n_br_fiscal.document_form" />
+        <field name="arch" type="xml">
+
+            <!-- Improved Send to Dominio button with icon -->
+            <xpath expr="//button[@name='view_pdf']" position="before">
+                <button
+                    string="Send to Dominio"
+                    name="action_send_dominio"
+                    type="object"
+                    icon="fa-cloud-upload"
+                    class="oe_highlight"
+                />
+                <button
+                    string="Sync Dominio"
+                    name="action_sync_dominio"
+                    type="object"
+                    icon="fa-refresh"
+                    attrs="{'invisible': [('dominio_batch_id', '=', False)]}"
+                />
+            </xpath>
+
+            <!-- Dominio notebook page with detailed event log -->
+            <xpath expr="//page[@name='extra_info']" position="after">
+                <page name="dominio" string="Dominio">
+                    <group>
+                        <group name="dominio_status" string="Status">
+                            <field
+                                name="state_dominio"
+                                widget="badge"
+                                decoration-info="state_dominio == 'pending'"
+                                decoration-success="state_dominio == 'stored'"
+                                decoration-warning="state_dominio == 'duplicated'"
+                                decoration-danger="state_dominio == 'error'"
+                            />
+                            <field name="dominio_batch_id" />
+                            <field name="state_dominio_code" />
+                        </group>
+                        <group name="dominio_status_details" string="Details">
+                            <field name="state_dominio_msg" readonly="1" />
+                        </group>
+                    </group>
+                    <group
+                        name="dominio_events"
+                        string="Events and Services"
+                        colspan="4"
+                    >
+                        <field name="dominio_event_ids" nolabel="1">
+                            <tree>
+                                <field name="create_date" />
+                                <field name="event_type" />
+                                <field name="batch_id" />
+                                <field name="status_code" />
+                                <field name="status_description" />
+                                <field name="last_api_status_on" />
+                                <field name="boxe_status_code" />
+                                <field name="boxe_status_message" />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+
+            <!-- Status banners for Dominio integration -->
+            <xpath expr="//header" position="after">
+                <field name="state_dominio" invisible="1" />
+                <field name="dominio_batch_id" invisible="1" />
+                <field name="state_dominio_code" invisible="1" />
+                <div
+                    class="alert alert-info"
+                    role="alert"
+                    attrs="{'invisible': [('state_dominio', '!=', 'pending')]}"
+                >
+                    Dominio - Pendente <field name="state_dominio_code" />
+                </div>
+                <div
+                    class="alert alert-success"
+                    role="alert"
+                    attrs="{'invisible': [('state_dominio', '!=', 'stored')]}"
+                >
+                    Dominio - Armazenado <field name="state_dominio_code" />
+                </div>
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    attrs="{'invisible': [('state_dominio', '!=', 'duplicated')]}"
+                >
+                    Dominio - Duplicado <field name="state_dominio_code" />
+                </div>
+                <div
+                    class="alert alert-danger"
+                    role="alert"
+                    attrs="{'invisible': [('state_dominio', '!=', 'error')]}"
+                >
+                    Dominio - Erro <field name="state_dominio_code" />
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="l10n_br_fiscal_document_tree_view">
+        <field name="name">l10n_br_fiscal.document.tree (in dominio_fiscal)</field>
+        <field name="model">l10n_br_fiscal.document</field>
+        <field name="inherit_id" ref="l10n_br_fiscal.document_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state_edoc']" position="after">
+                <field
+                    name="state_dominio"
+                    widget="badge"
+                    decoration-info="state_dominio == 'pending'"
+                    decoration-success="state_dominio == 'stored'"
+                    decoration-warning="state_dominio == 'duplicated'"
+                    decoration-danger="state_dominio == 'error'"
+                />
+
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

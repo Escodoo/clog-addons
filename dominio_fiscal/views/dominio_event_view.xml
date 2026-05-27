@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="dominio_event_tree_view" model="ir.ui.view">
+        <field name="name">dominio.event.tree</field>
+        <field name="model">dominio.event</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="create_date" />
+                <field name="event_type" />
+                <field name="batch_id" />
+                <field name="status_code" />
+                <field name="status_description" />
+                <field name="last_api_status_on" />
+                <field name="boxe_status_code" />
+                <field name="boxe_status_message" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>
