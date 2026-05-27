@@ -1,6 +1,6 @@
 
 
-# CLog Addons
+# C-LOG Addons
 <!-- /!\ Non OCA Context : Set here the badge of your runbot / runboat instance. -->
 [![Pre-commit Status](https://github.com/Escodoo/clog-addons/actions/workflows/pre-commit.yml/badge.svg?branch=14.0)](https://github.com/Escodoo/clog-addons/actions/workflows/pre-commit.yml?query=branch%3A14.0)
 [![Build Status](https://github.com/Escodoo/clog-addons/actions/workflows/test.yml/badge.svg?branch=14.0)](https://github.com/Escodoo/clog-addons/actions/workflows/test.yml?query=branch%3A14.0)
@@ -9,7 +9,7 @@
 
 <!-- /!\ do not modify above this line -->
 
-CLog Odoo Addons
+C-LOG Odoo Addons
 
 <!-- /!\ do not modify below this line -->
 
