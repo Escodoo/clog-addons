@@ -18,10 +18,9 @@ odoo_version: 14.0
 org_name: Escodoo
 org_slug: Escodoo
 rebel_module_groups: []
-repo_description: CLog Odoo Addons
-repo_name: CLog Addons
+repo_description: C-LOG Odoo Addons
+repo_name: C-LOG Addons
 repo_slug: clog-addons
 repo_website: https://github.com/Escodoo/clog-addons
 use_pyproject_toml: false
 use_ruff: true
-
