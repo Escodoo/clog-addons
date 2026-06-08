@@ -1,0 +1,120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dominio_fiscal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-23 18:51+0000\n"
+"PO-Revision-Date: 2024-08-23 15:55-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: dominio_fiscal
+#: model_terms:ir.ui.view,arch_db:dominio_fiscal.l10n_br_fiscal_document_form_view
+msgid "Create XML"
+msgstr ""
+
+#. module: dominio_fiscal
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_closing__display_name
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_document__display_name
+msgid "Display Name"
+msgstr "Nome Exibido"
+
+#. module: dominio_fiscal
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_document__dominio_code
+msgid "Dominio Code"
+msgstr "Código Dominio"
+
+#. module: dominio_fiscal
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_document__dominio_response
+msgid "Dominio Response"
+msgstr "Resposta Dominio"
+
+#. module: dominio_fiscal
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_document__dominio_transaction
+msgid "Dominio Transaction"
+msgstr "Transação Domínio"
+
+#. module: dominio_fiscal
+#: model:ir.model.fields.selection,name:dominio_fiscal.selection__l10n_br_fiscal_document__dominio_state__error
+msgid "Error"
+msgstr "Erro"
+
+#. module: dominio_fiscal
+#: code:addons/dominio_fiscal/models/closing.py:0
+#, python-format
+msgid "Failed to send fiscal XML to Dominio API: %s"
+msgstr "Falha ao enviar XML Fiscal para API Dominio: %s"
+
+#. module: dominio_fiscal
+#: model:ir.model,name:dominio_fiscal.model_l10n_br_fiscal_closing
+msgid "Fiscal Closing Period"
+msgstr "Período de Fechamento Fiscal"
+
+#. module: dominio_fiscal
+#: model:ir.model,name:dominio_fiscal.model_l10n_br_fiscal_document
+msgid "Fiscal Document"
+msgstr "Documento Fiscal"
+
+#. module: dominio_fiscal
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_closing__id
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_document__id
+msgid "ID"
+msgstr ""
+
+#. module: dominio_fiscal
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_closing____last_update
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_document____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: dominio_fiscal
+#: code:addons/dominio_fiscal/models/document.py:0
+#, python-format
+msgid "Processado com Sucesso"
+msgstr ""
+
+#. module: dominio_fiscal
+#: code:addons/dominio_fiscal/models/closing.py:0
+#, python-format
+msgid "Request error: %s"
+msgstr "Erro de solicitação: %s"
+
+#. module: dominio_fiscal
+#: model_terms:ir.ui.view,arch_db:dominio_fiscal.l10n_br_fiscal_closing_form_view
+msgid "Send Document"
+msgstr "Enviar Documentos"
+
+#. module: dominio_fiscal
+#: model:ir.model.fields,field_description:dominio_fiscal.field_l10n_br_fiscal_document__dominio_state
+msgid "State Dominio"
+msgstr "Situação Dominio"
+
+#. module: dominio_fiscal
+#: model:ir.model.fields.selection,name:dominio_fiscal.selection__l10n_br_fiscal_document__dominio_state__stored
+msgid "Stored"
+msgstr "Armazenado"
+
+#. module: dominio_fiscal
+#: code:addons/dominio_fiscal/models/closing.py:0
+#, python-format
+msgid ""
+"Unable to close Fiscal Closing: Some documents are not stored in the "
+"Dominio API."
+msgstr ""
+"Não foi possível fechar o Fechamento Fiscal: Alguns documentos não ficam "
+"armazenados na API Dominio."
+
+#. module: dominio_fiscal
+#: code:addons/dominio_fiscal/models/closing.py:0
+#, python-format
+msgid "XML Not found in Fiscal Document"
+msgstr "XML não encontrado no Documento Fiscal"
