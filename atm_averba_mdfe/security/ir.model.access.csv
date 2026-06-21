@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_atm_averba_event_user,atm.averba.event user,model_atm_averba_event,base.group_user,1,0,1,0
