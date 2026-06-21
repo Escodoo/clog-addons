@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="clog_maintenance_request_tree_extend_vehicle" model="ir.ui.view">
+        <field name="name">clog.maintenance.request.tree.extend.vehicle</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='stage_id']" position="before">
+                <field name="fleet_code" string="Fleet" />
+                <field name="year_model" string="Year/Model" />
+                <field name="license_plate" string="License Plate" />
+                <field name="equipment_id" string="Description" />
+                <field name="maintenance_type" string="Maintenance Type" />
+                <field
+                    name="equipment_cost"
+                    string="Equipment Cost"
+                    sum="Total equipment cost"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
