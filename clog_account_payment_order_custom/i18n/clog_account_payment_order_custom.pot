@@ -1,0 +1,205 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* clog_account_payment_order_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-14 16:58+0000\n"
+"PO-Revision-Date: 2025-04-14 16:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "- IE:"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "<strong style=\"font-size: 14px;\">DOCUMENT NUMBER</strong>"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "<strong style=\"font-size: 14px;\">TOTAL AMOUNT</strong>"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "<strong>TOTAL VALUE</strong>"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"<strong>The processing of personal data may be carried out for\n"
+"                                the execution of the transport contract (LGPD art. 7, V).</strong>"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Additional\n"
+"                                    Freight/Discounts Value"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "CNPJ/CPF:"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"CT-e / RPS /\n"
+"                                        NFS-e"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model:ir.model.fields,field_description:clog_account_payment_order_custom.field_account_payment_order__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "Due Date"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Exempt\n"
+"                                    Freight/Service Value"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Fiscal Doc.\n"
+"                                        No."
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "Freight (R$)"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Freight/Service\n"
+"                                    ICMS Value (12.00% Rate)"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Goods\n"
+"                                    Value of CTRCs"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "ICMS (R$)"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model:ir.model.fields,field_description:clog_account_payment_order_custom.field_account_payment_order__id
+msgid "ID"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "ISS (R$)"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model:ir.actions.report,name:clog_account_payment_order_custom.clog_action_pay_invoice_simple
+msgid "Invoice Simple"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "Issue Date"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model:ir.model.fields,field_description:clog_account_payment_order_custom.field_account_payment_order____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Market Value\n"
+"                                        (R$)"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Number of\n"
+"                                    Documents"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "PHONE:"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "Payer's Receipt"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model:ir.model,name:clog_account_payment_order_custom.model_account_payment_order
+msgid "Payment Order"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Return/Redelivery\n"
+"                                    Freight Value"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "ST (R$)"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "Sender"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "Tax Base (R$)"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Toll Value\n"
+"                                    of CTRCs"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid ""
+"Total\n"
+"                                        Documents:"
+msgstr ""
+
+#. module: clog_account_payment_order_custom
+#: model_terms:ir.ui.view,arch_db:clog_account_payment_order_custom.print_pay_invoice_simple_document
+msgid "Weight (Kg)"
+msgstr ""

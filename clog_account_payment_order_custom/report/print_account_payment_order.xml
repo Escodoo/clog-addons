@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="paperformat_print_pay_invoice_simple" model="report.paperformat">
+        <field name="name">A4 - Low Margin for Pay Invoice Simple</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">48</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">46</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <!-- QWeb Report -->
+    <record id="clog_action_pay_invoice_simple" model="ir.actions.report">
+        <field name="name">Invoice Simple</field>
+        <field name="model">account.payment.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field
+            name="report_name"
+        >clog_account_payment_order_custom.print_pay_invoice_simple_main</field>
+        <field
+            name="paperformat_id"
+            ref="clog_account_payment_order_custom.paperformat_print_pay_invoice_simple"
+        />
+        <field
+            name="report_file"
+        >clog_account_payment_order_custom.print_pay_invoice_simple_main</field>
+        <field
+            name="binding_model_id"
+            ref="account_payment_order.model_account_payment_order"
+        />
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
