@@ -79,6 +79,13 @@ class NddAverbaEvent(models.Model):
                     "policy_number": response["averbacoes"][0]["apolice_id"],
                 }
             )
+            document.write(
+                {
+                    "insurance_endorsement": response["averbacoes"][0][
+                        "numero_averbacao"
+                    ],
+                }
+            )
         elif state == "erro" and errors:
             vals.update(
                 {
