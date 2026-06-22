@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form (in dominio_payment)</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+
+            <!-- Send baixa button next to the standard header buttons -->
+            <xpath expr="//header" position="inside">
+                <field name="dominio_payment_state" invisible="1" />
+                <button
+                    string="Enviar Baixa Dominio"
+                    name="action_send_dominio_baixa"
+                    type="object"
+                    icon="fa-cloud-upload"
+                    attrs="{'invisible': [('dominio_payment_state', 'not in', ('pending', 'error'))]}"
+                />
+            </xpath>
+
+            <!-- Dominio Baixas page with the reconciled payment lines -->
+            <xpath expr="//notebook" position="inside">
+                <page
+                    name="dominio_baixas"
+                    string="Dominio Baixas"
+                    attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'in_invoice', 'out_refund', 'in_refund'))]}"
+                >
+                    <group>
+                        <field
+                            name="dominio_payment_state"
+                            widget="badge"
+                            decoration-info="dominio_payment_state == 'pending'"
+                            decoration-success="dominio_payment_state == 'done'"
+                            decoration-danger="dominio_payment_state == 'error'"
+                        />
+                    </group>
+                    <field name="dominio_baixa_line_ids" nolabel="1">
+                        <tree create="false" delete="false" editable="bottom">
+                            <field name="date" readonly="1" />
+                            <field name="move_id" readonly="1" />
+                            <field name="name" readonly="1" />
+                            <field name="balance" readonly="1" />
+                            <field
+                                name="dominio_state"
+                                widget="badge"
+                                decoration-info="dominio_state == 'pending'"
+                                decoration-success="dominio_state == 'stored'"
+                                decoration-warning="dominio_state == 'duplicated'"
+                                decoration-danger="dominio_state == 'error'"
+                            />
+                            <field name="dominio_batch_id" readonly="1" />
+                            <field name="dominio_code" readonly="1" />
+                            <field name="dominio_msg" readonly="1" />
+                            <button
+                                string="Enviar Baixa"
+                                name="action_dominio_send_baixa"
+                                type="object"
+                                icon="fa-cloud-upload"
+                                attrs="{'invisible': [('dominio_state', '=', 'stored')]}"
+                            />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- Search filters / group by for the baixa integration status -->
+    <record id="view_account_invoice_filter" model="ir.ui.view">
+        <field name="name">account.invoice.select (in dominio_payment)</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter" />
+        <field name="arch" type="xml">
+            <filter name="reversed" position="after">
+                <separator />
+                <filter
+                    name="dominio_baixa_pending"
+                    string="Baixa Dominio - A Enviar"
+                    domain="[('dominio_payment_state', '=', 'pending')]"
+                />
+                <filter
+                    name="dominio_baixa_error"
+                    string="Baixa Dominio - Erro"
+                    domain="[('dominio_payment_state', '=', 'error')]"
+                />
+                <filter
+                    name="dominio_baixa_done"
+                    string="Baixa Dominio - Integrado"
+                    domain="[('dominio_payment_state', '=', 'done')]"
+                />
+            </filter>
+            <filter name="status" position="after">
+                <filter
+                    name="groupby_dominio_payment_state"
+                    string="Status Baixa Dominio"
+                    context="{'group_by': 'dominio_payment_state'}"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <!-- Mass action: send baixas for the selected invoices from the list view -->
+    <record id="action_server_send_dominio_baixa" model="ir.actions.server">
+        <field name="name">Enviar Baixa Dominio</field>
+        <field name="model_id" ref="account.model_account_move" />
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.action_send_dominio_baixa_multi()</field>
+    </record>
+
+</odoo>
